@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CfgProject>
+ <Name>project.x</Name>
+ <CycleLength>1000</CycleLength>
+ <AdvancedView>1</AdvancedView>
+ <CfgNodes>
+  <CfgNode>
+   <Name>Ahoj</Name>
+   <Number>12</Number>
+   <IsRex>0</IsRex>
+   <SourceFile>somefile</SourceFile>
+   <CfgIndexes>
+    <CfgIndex>
+     <Number>1000</Number>
+     <IsUser>1</IsUser>
+     <CdcExportable>1</CdcExportable>
+     <CfgSubindexes>
+      <CfgSubindex>
+       <Number>0</Number>
+       <CdcExportable>1</CdcExportable>
+      </CfgSubindex> 
+     </CfgSubindexes>
+    </CfgIndex> 
+   </CfgIndexes>
+  </CfgNode>
+  
+  <CfgNode>
+   <Number>13</Number>
+  </CfgNode>
+  
+ </CfgNodes>
+
+</CfgProject>

@@ -1,0 +1,47 @@
+% -*- coding: utf-8 -*-
+
+% main definitions
+% 
+\documentclass[12pt,oneside]{article}
+\usepackage[czech]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{fancyheadings}
+\usepackage{a4wide}
+
+% nechat comment
+\usepackage{graphicx}
+\usepackage{acronym}
+\usepackage[left=3.5cm,top=3.5cm,right=2.5cm,bottom=3.5cm]{geometry}
+
+% informations
+\title{Eplconfigurator - Uživatelská dokmentace}
+\author{Jan Krcmar}
+
+% paragraph definitions
+\linespread{1.2}
+\frenchspacing
+
+% heading&footing
+%\pagestyle{empty}
+\pagestyle{fancy}
+\lhead{} \chead{} \rhead{\leftmark}
+\lfoot{} \cfoot{\thepage} \rfoot{}
+
+% page content
+%
+\begin{document}
+
+% first page
+\input titulni.tex
+
+\newpage
+\tableofcontents
+
+\newpage
+\setcounter{page}{1}
+\input obsah.tex
+
+% document content
+%\fontsize{12pt}{15} \selectfont
+
+\end{document}

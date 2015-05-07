@@ -1,0 +1,172 @@
+\newpage
+\section{Úvod}
+Pro konfiguraci EPL sítě existuje nástroj OpenConfigurator.
+Ten však nezvládá některé námi požadované operace a spolupráci se systémem REX.
+Tento nástroj je napsán v jazyce Tcl, což činí jeho další rozšíření komplikovanější.
+Proto bylo rozhodnuto o napsání nového konfigurátoru sítě Ethernet POWERLINK, 
+který byl dobře rozšiřitelný a uměl spolupracovat se systémem REX.
+
+%
+% Keywords
+%
+\section{Pojmy}
+\subsection{Nod}
+Objekt který reprezentuje jeden uzel EPL sítě. 
+Nod má určité vlastnosti. 
+Dále obsahuje indexy, subindexy a domény, které jsou uspořádány ve stromové struktuře.
+Definovaný bývá zpravidla XDD souborem.
+
+\subsection{Connection}
+Mapování objektů (index, subindex, doména) mezi jednotlivými nody tak, jak je definováno v EPL.
+PDO odpovídají vztahu producer/consumer, existuje vždy jeden zdroj dat avšak více odběratelů. 
+V connection je tedy vždy jeden zdroj dat a jedne nebo více odběratelů. 
+Connection dále obsahuje identifikační číslo, název a typ, který je definován typem consumera.
+
+\subsection{Alias}
+Zástupný název pro index, subindex nebo doménu.
+
+\subsection{Projekt}
+Objekt, který obsahuje nody, jejich propojení (connection) a aliasy.
+Dále má projekt určité vlastnosti a parametry pro generování mapování.
+
+%
+% Menu description
+%
+\section{Menu}
+\subsection{Project}
+\begin{itemize}
+\item New vytvoří nový projekt.
+\item Open načte existující projekt. Uživatel je pomocí dialogu vyzván k tomu, aby projekt vybral. 
+\item Close zavře otevřený projekt.
+\item Save uloží projekt do souboru, ze kterého byl načten.
+\item Save as uloží projekt do nového souboru. Soubor je vybrán pomocí dialogu.
+\item Recent projects zobrazí seznam několika posledních otevřených projektů.
+\item Reload znovu načte projekt ze souboru.
+\item Exit uzavře projekt. 
+\end{itemize}
+
+\subsection{Network}
+\begin{itemize}
+\item Add node přidá nový node do projektu. Uživatel je vyzván, aby vybral soubor obsahující popis nodu.
+\item Network properties \ldots
+\end{itemize}
+
+\subsection{Configuration}
+\begin{itemize}
+\item Generate PDO automaticky generuje PDO mapování.
+\item Generate output for REX automaticky generuje nastavení pro systém REX.
+\item Open folder otevře adresář, ve kterém se nachází právě otevřený projekt.
+\end{itemize}
+
+\subsection{Help}
+\begin{itemize}
+\item About EplConfig zobrazí stručné informace o programu.
+\end{itemize}
+
+%
+% Function description
+%
+\section{Funkce}
+Pomocí EplConfig lze provést kompletní konfiguraci sítě Ethernet POWERLINK, 
+do které jsou připojeny nódy se systémem REX i nódy třetích stran. 
+
+\subsection{Přidání nodu}
+Pro každý nód v síti je importován soubor xdd. Při importu se EplConfig ptá na
+\begin{itemize}
+\item soubor XDD (libovolný zvolený uživatelem nebo výchozí pro REXový nód),
+\item index nódu v síti (240 pro MN), 1 \ldots 239 pro CN,
+\item název nódu,
+\item infromaci o tom, jestli je nod REX-nód.
+\end{itemize}
+
+\subsection{Editace hodnot object dictionary}
+Konfigurace je vytvořena na základě importovaných xdd souborů po uživatelské editaci.
+
+EplConfig zpřístupní hodnoty, které mají nastaven přístup na "w", "rw" pro editaci. 
+Při editaci je nutné respektovat typ a formát dat.
+Struktura projektu je zobrazena ve stromové hierarchii. 
+Úroveň ve stromové hierarchii je následující:
+\begin{itemize}
+\item Název projektu,
+\item název a číslo nodu,
+\item číslo a název indexu,
+\item číslo a název subindexu,
+\item pokud je subindex binární pole (domain) a je k dispozici popis tohoto pole, 
+pak jsou zde položky tohoto pole, jinak 5. úroveň není.
+\end{itemize}
+
+U každého editovatelného objektu (indexu, subindex) je možné zakliknout, 
+zda bude objekt zahrnut do výstupních souborů pro další použití v REXu.
+Vytváření objektů v OD pro REXové nódy
+Manufacturer specific area (2000h - 5FFFh) bude v rexu generována dynamicky 
+na základě funkčního algoritmu a požadavků na vstupy a výstupy. 
+EplConfig musí umožnit vytvářet tuto oblast tj. 
+je možné přidávat objekty (indexy, subindexy) do REXových nódů.
+
+Objekty lze vytvářet těmito způsoby:
+
+\begin{itemize}
+\item Ručně. Uživatel sám zvolí číslo a název indexu a subindexu, typ dat a výchozí hodnotu.
+\item Automaticky na základě mapovaní PDO (viz dále).
+\end{itemize}
+
+\subsection{Vytváření PDO mapování}
+EplConfig umožňuje vytvářet datové propojení (connection) mezi nódy. 
+Cíl i odběratel je jednoznačně identifikován ve tvaru nód.index.subindex[.offset v binárním poli]. 
+
+Uživateli je tento tvar zobrazen v popisné textové podobě, uvnitř EplConfig jsou uloženy číselné hodnoty. 
+Není možné, aby byly v jedné connection byl více než jeden odkaz na data z jednoho nódu!
+
+Vytvoření nové connection.
+\begin{itemize}
+\item V pravém panelu zvolíme záložku Connection. 
+Ve stromu projektu zvolíme objekt a přetáhneme ho na prázdný řádek connection.
+\item Pravým tlačítkem klikneme na tabulku mapování a zvolíme Add connection.
+\end{itemize}
+
+Editace mapování.
+\begin{itemize}
+\item Změna mapování. Přetáhneme objekt ze stromu a přetáhneme ho na požadované místo v tabulce.
+\item Odstanění prvku. Zvolíme danou buňku v tabulce a stisknutím klávesy Delete odebereme prvek. 
+Při označení identifikátoru, nebo názvu mapování se odstraní celé mapování.
+\item Přejmenování mapování zvolíme název, který chceme změnit a stiskneme klávesu F2, nebo dvakrát klikneme.
+Objeví se editační buňka, kde upravíme název connection.
+\end{itemize}
+
+\subsection{Vytváření aliasů pro REXové nódy}
+Ve schématu systému REX se na data okazuje vstupním nebo výstupním blokem pojmenovaným ve tvaru EPL OdkazNaData.
+OdkazNaData musí jednoznačně odkazovat na data. 
+Pokud se OdkazNaData shoduje s názvem subindexu, jedná se o odkaz na tento subindex. 
+EPL však umožňuje pracovat s daty typu binární pole (domain). 
+Pokud je v OD vytvořen objekt tohoto typu, je nutné umožnit přístup i k offsetu v tomto poli. 
+Proto jsou zavedeny datové aliasy. 
+Datový alias jednoznačně identifikuje data pro daný nód ve tvaru index.subindex(.offset). 
+Uživateli je alias opět zobrazen v textové podobě, v programu je odkaz uložen číselně.
+
+Aliasy lze editovat v pravém panelu v záložce Aliases.
+\begin{itemize}
+\item Vytvoření aliasu proběhne
+\subitem editací jména aliasu na prázdném řádku, klávesou F2, nebo dvojitým kliknutím, 
+\subitem přetažením objektu ze stromu na prázdný řádek.
+\item Upravení aliasu
+\subitem editací jména aliasu na příslušném řádku, klávesou F2, nebo dvojitým kliknutím, 
+\subitem přetažením objektu ze stromu na příslušný řádek.
+\item Odstranění aliasu proběhne označením příslušného řádku a stisknutí klávesy Delete.
+\end{itemize}
+
+\subsection{Generování PDO mapování}
+Na základě vytvořeného PDO mapování jsou vygenerovány hodnoty pro objekty 1400h, 1600h, 1800h, 1A00h. 
+Při generování je nutné provést typovou kontrolu a brát zřetel na fakt, 
+že pro některé nódy mohou být hodnoty v těchto objektech pevně dané tj. read-only. 
+V takovém případě je možné manipulovat pouze s hodnotami "na druhé straně".
+
+\subsection{Generování výstupu pro RexView}
+Výstup z EplConfig je předán RexView v textové podobě ve formátu mdl. Soubor obsahuje:
+\begin{itemize}
+\item Seznam vytvořených objektů pro každý nód (podle odstavce 2).
+\item Seznam vytvořených aliasů pro každý nód.
+\item Výchozí nastavení OD tj. seznam hodnot ve tvaru index,subindex,data pro každý nód. 
+Tento seznam bude zahrnovat veškeré PDO mapování (tj. objekty 1400h, 1600h, 1800h, 1A00h) a objekty, 
+které jsou zahrnuté do generovaného výstupu.
+\end{itemize}
+

@@ -1,0 +1,521 @@
+Model {
+  Name                    "motor_p"
+  Version                 3.00
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "motor_p"
+    Location                [181, 326, 1133, 756]
+    #GUID                   c195aae5-caf4-4e50-a595-c1748720936a
+    Block {
+      BlockType               Reference
+      Name                    "ADD_1"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [130, 343, 155, 377]
+      SourceBlock             "mathlib/ADD"
+      ShowName                on
+      NamePlacement           ""
+      #GUID                   5a27293d-40c9-414a-b4fc-0b3758ea953e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ADD_2"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [205, 338, 230, 372]
+      SourceBlock             "mathlib/ADD"
+      ShowName                on
+      NamePlacement           ""
+      #GUID                   35f8f948-e04d-44e9-a297-f800b59a7dda
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ADD_3"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [655, 23, 680, 57]
+      SourceBlock             "mathlib/ADD"
+      ShowName                on
+      NamePlacement           ""
+      #GUID                   15ae6923-cc25-4cff-af79-cdb29efe3450
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ADD_4"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [520, 73, 545, 107]
+      SourceBlock             "mathlib/ADD"
+      ShowName                on
+      NamePlacement           ""
+      #GUID                   3b86f626-2964-4913-990b-9a075ebf52e2
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [815, 353, 830, 367]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      #GUID                   bbedebe8-9383-47af-9b61-abfca7b6659b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [685, 108, 700, 122]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      #GUID                   1aea737c-beea-44f2-9156-b24726575d3c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [555, 368, 570, 382]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      #GUID                   03ee2d11-863b-4b1d-b92a-e2c084bbdaf1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_MAN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [495, 163, 510, 177]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      #GUID                   102c4958-2a36-4954-a1e6-0dcc416811f5
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [140, 308, 155, 322]
+      SourceBlock             "mathlib/CNI"
+      ShowName                on
+      NamePlacement           ""
+      icn                     15
+      #GUID                   4b957de8-5c2f-480a-8eb3-3da77c40140a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 218, 65, 232]
+      SourceBlock             "mathlib/CNI"
+      ShowName                on
+      NamePlacement           ""
+      icn                     3
+      #GUID                   f96bd320-08b6-46e4-a3dc-51d590186f1c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [65, 368, 80, 382]
+      SourceBlock             "mathlib/CNI"
+      ShowName                on
+      NamePlacement           ""
+      icn                     64
+      #GUID                   0e588262-7c86-4f1e-8ffd-e9266a49c4c7
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [565, 58, 580, 72]
+      SourceBlock             "mathlib/CNI"
+      ShowName                on
+      NamePlacement           ""
+      icn                     0
+      #GUID                   011ae9e4-a0a5-485a-807c-81b150b429ab
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_sp"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [450, 93, 465, 107]
+      SourceBlock             "mathlib/CNR"
+      ShowName                on
+      NamePlacement           ""
+      ycn                     1
+      #GUID                   6c681062-1f4f-45cb-9078-d550006992e2
+    }
+    Block {
+      BlockType               From
+      Name                    "From_1"
+      Position                [45, 30, 190, 50]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "EPL__StatusWord"
+      #GUID                   3dfcf0b0-612e-4f47-a4bb-5fac9512469d
+    }
+    Block {
+      BlockType               From
+      Name                    "From_2"
+      Position                [380, 120, 525, 140]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "EPL__PositionActual"
+      #GUID                   ef5beb9e-bf43-4b15-91e3-dc4073ae6671
+    }
+    Block {
+      BlockType               From
+      Name                    "From_3"
+      Position                [670, 290, 815, 310]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "EPL__VelocityActual"
+      #GUID                   b03fc1d9-1a8f-4504-a6e3-67b69316121d
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_1"
+      Position                [320, 335, 435, 355]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "EPL__ControlWord"
+      TagVisibility           "local"
+      #GUID                   1d739e0c-ee57-4a21-aceb-5f25cc6ffd6c
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_2"
+      Position                [795, 95, 910, 115]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "EPL__VelocityTarget"
+      TagVisibility           "local"
+      #GUID                   aee5cbf6-6e3e-4ad5-a735-d26e08f06ac7
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_3"
+      Position                [95, 215, 210, 235]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "EPL__OpMode"
+      TagVisibility           "local"
+      #GUID                   ee22b802-1615-4841-96fc-8e8446dd2c5a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PIDMA_1"
+      Ports                   [11, 14, 0, 0, 0]
+      Position                [595, 88, 650, 252]
+      SourceBlock             "reglib/PIDMA"
+      ShowName                on
+      NamePlacement           ""
+      irtype                  "4: P"
+      RACT                    off
+      k                       "0.01"
+      ti                      4
+      td                      1
+      nd                      10
+      b                       1
+      c                       0
+      tt                      1
+      hilim                   500
+      lolim                   -500
+      dz                      0
+      icotype                 "1: Analog"
+      ittype                  "6: PI"
+      iainf                   "1: Static process"
+      DGC                     on
+      tdg                     60
+      tn                      5
+      amp                     "0.5"
+      dy                      "0.1"
+      ispeed                  "2: Normal (middle fast) CL"
+      ipid                    "1: Parallel form"
+      #GUID                   42cd66de-c8bd-4011-b04a-ee568cf44a2d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG_1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [570, 23, 595, 37]
+      SourceBlock             "genlib/SG"
+      ShowName                on
+      NamePlacement           ""
+      isig                    "2: SQUARE"
+      amp                     0
+      freq                    "0.05"
+      phase                   0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degree"
+      #GUID                   db755fd3-7ccb-43dd-8b7e-9b1a8e3c9c1e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG_2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [60, 343, 85, 357]
+      SourceBlock             "genlib/SG"
+      ShowName                on
+      NamePlacement           ""
+      isig                    "2: SQUARE"
+      amp                     64
+      freq                    "0.1"
+      phase                   0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degree"
+      #GUID                   019d32a7-78ea-43da-b11f-f9e4f37cbddf
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG_sp"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [445, 63, 470, 77]
+      SourceBlock             "genlib/SG"
+      ShowName                on
+      NamePlacement           ""
+      isig                    "2: SQUARE"
+      amp                     0
+      freq                    "0.05"
+      phase                   0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degree"
+      #GUID                   32ae1dcb-734b-4789-9f4e-e565e3775ff4
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SSW_1"
+      Ports                   [3, 1, 0, 0, 0]
+      Position                [730, 88, 760, 122]
+      SourceBlock             "reglib/SSW"
+      ShowName                on
+      NamePlacement           ""
+      #GUID                   abaf2ad2-95c4-473e-8a4e-9bf78727438c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_1"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [850, 271, 905, 389]
+      SourceBlock             "arclib/TRND"
+      ShowName                on
+      NamePlacement           ""
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      #GUID                   b50ee5ce-0a80-4259-969d-74d658d52224
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_2"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [590, 286, 645, 404]
+      SourceBlock             "arclib/TRND"
+      ShowName                on
+      NamePlacement           ""
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     ""
+      id                      2
+      Title                   "Trend Title"
+      #GUID                   ad4b4936-aa9f-4f4e-8c0b-a51d9585b260
+    }
+    Line {
+      SrcBlock                "ADD_1"
+      SrcPort                 1
+      Points                  [30, 0]
+      DstBlock                "ADD_2"
+      DstPort                 2
+    }
+    Line {
+      SrcBlock                "ADD_2"
+      SrcPort                 1
+      Points                  [50, 0; 0, -10]
+      DstBlock                "Goto_1"
+      DstPort                 1
+    }
+    Line {
+      SrcBlock                "ADD_3"
+      SrcPort                 1
+      Points                  [30, 0]
+      DstBlock                "SSW_1"
+      DstPort                 1
+    }
+    Line {
+      SrcBlock                "ADD_4"
+      SrcPort                 1
+      Points                  [15, 0]
+      Branch {
+        Points                  [15, 0]
+        DstBlock                "PIDMA_1"
+        DstPort                 2
+      }
+      Branch {
+        Points                  [0, 205]
+        DstBlock                "TRND_2"
+        DstPort                 1
+      }
+    }
+    Line {
+      SrcBlock                "CNB_1"
+      SrcPort                 1
+      DstBlock                "TRND_1"
+      DstPort                 5
+    }
+    Line {
+      SrcBlock                "CNB_2"
+      SrcPort                 1
+      DstBlock                "SSW_1"
+      DstPort                 3
+    }
+    Line {
+      SrcBlock                "CNB_3"
+      SrcPort                 1
+      DstBlock                "TRND_2"
+      DstPort                 5
+    }
+    Line {
+      SrcBlock                "CNB_MAN"
+      SrcPort                 1
+      DstBlock                "PIDMA_1"
+      DstPort                 6
+    }
+    Line {
+      SrcBlock                "CNI_1"
+      SrcPort                 1
+      Points                  [30, 0]
+      DstBlock                "ADD_2"
+      DstPort                 1
+    }
+    Line {
+      SrcBlock                "CNI_2"
+      SrcPort                 1
+      DstBlock                "Goto_3"
+      DstPort                 1
+    }
+    Line {
+      SrcBlock                "CNI_3"
+      SrcPort                 1
+      Points                  [30, 0]
+      DstBlock                "ADD_1"
+      DstPort                 2
+    }
+    Line {
+      SrcBlock                "CNI_4"
+      SrcPort                 1
+      Points                  [0, -15]
+      DstBlock                "ADD_3"
+      DstPort                 2
+    }
+    Line {
+      SrcBlock                "CNR_sp"
+      SrcPort                 1
+      DstBlock                "ADD_4"
+      DstPort                 2
+    }
+    Line {
+      SrcBlock                "From_2"
+      SrcPort                 1
+      Points                  [5, 0]
+      Branch {
+        Points                  [45, 0]
+        DstBlock                "PIDMA_1"
+        DstPort                 3
+      }
+      Branch {
+        Points                  [0, 185]
+        DstBlock                "TRND_2"
+        DstPort                 2
+      }
+    }
+    Line {
+      SrcBlock                "From_3"
+      SrcPort                 1
+      DstBlock                "TRND_1"
+      DstPort                 2
+    }
+    Line {
+      SrcBlock                "PIDMA_1"
+      SrcPort                 1
+      DstBlock                "SSW_1"
+      DstPort                 2
+    }
+    Line {
+      SrcBlock                "SG_1"
+      SrcPort                 1
+      DstBlock                "ADD_3"
+      DstPort                 1
+    }
+    Line {
+      SrcBlock                "SG_2"
+      SrcPort                 1
+      DstBlock                "ADD_1"
+      DstPort                 1
+    }
+    Line {
+      SrcBlock                "SG_sp"
+      SrcPort                 1
+      Points                  [30, 0]
+      DstBlock                "ADD_4"
+      DstPort                 1
+    }
+    Line {
+      SrcBlock                "SSW_1"
+      SrcPort                 1
+      Points                  [5, 0]
+      Branch {
+        DstBlock                "Goto_2"
+        DstPort                 1
+      }
+      Branch {
+        Points                  [0, 175]
+        DstBlock                "TRND_1"
+        DstPort                 1
+      }
+    }
+  }
+}

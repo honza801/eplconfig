@@ -1,0 +1,254 @@
+Powerlink {
+  NodeID "240"
+  CycleLength "2000"
+  EplIndex {
+    Name "Drive1out"
+    Index "0x2010"
+    EplSubindex {
+      Name "NumberOfEntries"
+      Subindex "0x00"
+      DataType "2"
+      DataLength "1"
+      Read "1"
+      Write "0"
+      PDO "0"
+    }
+    EplSubindex {
+      Name "ControlWord"
+      Subindex "0x01"
+      DataType "6"
+      DataLength "2"
+      Read "1"
+      Write "0"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "VelocityTarget"
+      Subindex "0x02"
+      DataType "4"
+      DataLength "4"
+      Read "1"
+      Write "0"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "OpMode"
+      Subindex "0x03"
+      DataType "3"
+      DataLength "2"
+      Read "1"
+      Write "0"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "SpeedTarget"
+      Subindex "0x04"
+      DataType "3"
+      DataLength "2"
+      Read "1"
+      Write "0"
+      PDO "0"
+    }
+  }
+  EplIndex {
+    Name "BROut"
+    Index "0x2011"
+    EplSubindex {
+      Name "NumberOfEntries"
+      Subindex "0x00"
+      DataType "5"
+      DataLength "1"
+      Read "0"
+      Write "0"
+      PDO "0"
+    }
+    EplSubindex {
+      Name "AO1"
+      Subindex "0x01"
+      DataType "3"
+      DataLength "2"
+      Read "1"
+      Write "0"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "AO2"
+      Subindex "0x02"
+      DataType "3"
+      DataLength "2"
+      Read "1"
+      Write "0"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "DO1"
+      Subindex "0x03"
+      DataType "1"
+      DataLength "1"
+      Read "1"
+      Write "0"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "DO2"
+      Subindex "0x04"
+      DataType "1"
+      DataLength "1"
+      Read "1"
+      Write "0"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "DO3"
+      Subindex "0x05"
+      DataType "1"
+      DataLength "1"
+      Read "1"
+      Write "0"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "DO4"
+      Subindex "0x06"
+      DataType "1"
+      DataLength "1"
+      Read "1"
+      Write "0"
+      PDO "1"
+    }
+  }
+  EplIndex {
+    Name "Drive1in"
+    Index "0x2020"
+    EplSubindex {
+      Name "NumberOfEntries"
+      Subindex "0x00"
+      DataType "2"
+      DataLength "1"
+      Read "1"
+      Write "0"
+      PDO "0"
+    }
+    EplSubindex {
+      Name "StatusWord"
+      Subindex "0x01"
+      DataType "3"
+      DataLength "2"
+      Read "1"
+      Write "1"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "PositionActual"
+      Subindex "0x02"
+      DataType "4"
+      DataLength "4"
+      Read "1"
+      Write "1"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "VelocityActual"
+      Subindex "0x03"
+      DataType "3"
+      DataLength "2"
+      Read "1"
+      Write "1"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "TorqueActual"
+      Subindex "0x04"
+      DataType "4"
+      DataLength "4"
+      Read "1"
+      Write "1"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "OpModeActual"
+      Subindex "0x05"
+      DataType "3"
+      DataLength "2"
+      Read "1"
+      Write "1"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "StopFault"
+      Subindex "0x06"
+      DataType "6"
+      DataLength "2"
+      Read "1"
+      Write "1"
+      PDO "1"
+    }
+  }
+  EplIndex {
+    Name "BRIn"
+    Index "0x2021"
+    EplSubindex {
+      Name "NumberOfEntries"
+      Subindex "0x00"
+      DataType "5"
+      DataLength "1"
+      Read "0"
+      Write "0"
+      PDO "0"
+    }
+    EplSubindex {
+      Name "AI1"
+      Subindex "0x01"
+      DataType "3"
+      DataLength "2"
+      Read "1"
+      Write "1"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "AI2"
+      Subindex "0x02"
+      DataType "3"
+      DataLength "2"
+      Read "1"
+      Write "1"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "DI1"
+      Subindex "0x03"
+      DataType "1"
+      DataLength "1"
+      Read "1"
+      Write "1"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "DI2"
+      Subindex "0x04"
+      DataType "1"
+      DataLength "1"
+      Read "1"
+      Write "1"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "DI3"
+      Subindex "0x05"
+      DataType "1"
+      DataLength "1"
+      Read "1"
+      Write "1"
+      PDO "1"
+    }
+    EplSubindex {
+      Name "DI4"
+      Subindex "0x06"
+      DataType "1"
+      DataLength "1"
+      Read "1"
+      Write "1"
+      PDO "1"
+    }
+  }
+}

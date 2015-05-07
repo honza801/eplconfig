@@ -1,0 +1,116 @@
+Model {
+  Name                    "exec"
+  Version                 3.00
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "exec"
+    Location                [35, 31, 452, 526]
+    #GUID                   da879306-1b3e-46b3-9b88-2a815239b41f
+    Block {
+      BlockType               Reference
+      Name                    "EPL"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [255, 138, 305, 172]
+      SourceBlock             "execlib/TIODRV"
+      ShowName                on
+      NamePlacement           ""
+      module                  "EplDrv"
+      classname               "EplDrv"
+      cfgname                 "nodeF0.mdl"
+      factor                  10
+      stack                   10240
+      pri                     3
+      #GUID                   58e49a10-9790-442b-99bf-2cb44eaafd40
+    }
+    Block {
+      BlockType               Reference
+      Name                    "EXEC_1"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [125, 96, 170, 364]
+      SourceBlock             "execlib/EXEC"
+      ShowName                on
+      NamePlacement           ""
+      target                  "PC - Windows"
+      tick                    "0.05"
+      ntick0                  10
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   ba675f15-47e1-4ff1-90ac-35b6880cedec
+    }
+    Block {
+      BlockType               Reference
+      Name                    "EplDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [195, 117, 245, 133]
+      SourceBlock             "execlib/MODULE"
+      ShowName                on
+      NamePlacement           ""
+      #GUID                   62b0ff46-edd5-4ddb-906d-e65d6ea291e5
+    }
+    Block {
+      BlockType               Reference
+      Name                    "motor_p"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [325, 157, 375, 173]
+      SourceBlock             "execlib/IOTASK"
+      ShowName                on
+      NamePlacement           ""
+      factor                  1
+      stack                   2048
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   881570dd-2651-4d02-bdc0-86d95f5286b5
+    }
+    Line {
+      SrcBlock                "EPL"
+      SrcPort                 2
+      DstBlock                "motor_p"
+      DstPort                 1
+    }
+    Line {
+      SrcBlock                "EXEC_1"
+      SrcPort                 1
+      DstBlock                "EplDrv"
+      DstPort                 1
+    }
+    Line {
+      SrcBlock                "EXEC_1"
+      SrcPort                 2
+      DstBlock                "EPL"
+      DstPort                 1
+    }
+  }
+}

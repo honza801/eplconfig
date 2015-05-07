@@ -1,0 +1,175 @@
+Nejvyssi priorita:
+
+Vysoka priorita (razeno dle dulezitosti):
+
+- v largeview umožnit přidávat connections tj:
+  - vždy jeden řádek prázdný
+  - při drop vytvořit novou connection
+  - jak poznat, jestli je to src nebo dest? viz následující
+- začít kontrolovat atributy a typy při tvorbě connections
+  - RPDO mohou být jen dest, TPDO jen src, default nevím, asi podle typu R/W
+  - velikost v bitech musí sedět
+  - co dělat, pokud něco nesedí:
+    - při vytváření povolit jen RPDO na dest a TPDO na src
+    - pokud při vytváření nesedí velikost, vyskočí varování (dialog)
+    - při každé změně connection nebo objektu v connection (v panelu properties) - validovat connection
+      - pokud nesedí velikost nebo RPDO/TPDO vs. src/dest, budou buňky s názvem a typem červené
+- předělat treeview pomocí modelu
+  - chci: - aby každý objekt (index, subindex, node atd.) měl 2 metody:
+    - getStringForTreeView - tam si budu moct dělat co chci
+    - stringForTreeView changed - tohle zavolám, pokud se něco změní a je třeba updatovat treeview
+      (je možné to vymyslet i jinak, ale prostě chci pracovat s těmahle dvěma metodama)
+  - až bude model hotový, bude mít alespoň 3 režimy:
+    - compact view (jako teď)
+    - advanced view (jako teď)
+    - scope view (OD roztříděn do device specific area, manufacturer specific apod. 
+    viz specifikace)
+- možnost uzamknout node pro editaci (isLocked)
+ - zakáže změnu objektů, přidávání/odebírání objektů
+ - zůstane pouze možnost změnit actualValue 
+- lépe pracovat s actual value a default value - není jasné, jestli je to hex nebo dec (týká se i např. čísla subindexu)
+
+low priority:
+  - udělat barevné textové menu, chyby červeně, warningy modře, atd. 
+  - udelat viewer PDO kanalu jako ma openCONFIGURATOR
+    - přehledná tabulka
+    - volby add a remove channel (objekty 14xx/16xx resp. 18xx/1Axx)
+  - vytvorit statusbar s polozkami: nazev projektu, uplna cesta k projektu, 
+    status (saved, modified)
+  - na linuxu ukládat konfiguraci eplconfigu do .eplconfig/explconfig.cfg
+  - umožnit přidat node bez xdc (tj. veme se nějaký základní očesaný template)
+   
+Ostatni
+ - procistit kod:
+  - procistit pretezovane konstruktory 
+
+testovat <- jestli je tohle tady v poradku, tak to prosim postupne presouvej do 'hotovo'
+--------
+-skript a/nebo nejakej Makefile na generovani jar, 
+ melo by to jit z win i linuxu
+- správně manipulovat s connections i pokud jsou setříděné
+-chybi cislovani aliasu, nelze ted editovat nazev connection, 
+ nefunguje drop pri serazeni atd...
+- v tabukách by mělo být možné řadit podle sloupce kliknutím na příslušnou column
+- očíslovat aliasy
+
+
+hotovo
+------
+- implementovat largeview může být číslo nodu vynecháno, protože každé node odpovídá jeden sloupec. (viz TODO).
+tohle, co jsem popsal je tzv. compactView pak bude mit tabulka largeView tj. sloupci 
+bude odpovidat presne jedna node, tj. tabulka bude "ridsi"
+v tomto rezimu bude source oznacena zelene, destination zlute; takto bychom to 
+mohli oznacit i v tom compactview
+- opraveno remove destinations v connection table modelu
+- opraveno parent node pro eplobject a razeni eplsubindexu ve stromu
+- zakazan reordering columns v connection a alias panelu
+- bylo dobre, aby connection mela krome jmena sve cislo (index) a pridat jeste jeden sloupec, kde bude tohle cislo videt
+- do open dialogu udelat filtr *.ecp (vychozi) a *.* (volitelne) 
+- dodelat about (napis tam credits: me a sebe, rok, nech tam misto pro obrazek, tlacitko ok, zadne menu)
+- spravne pridavat nove connections
+- dodelat recent, vyuzit System.getProperty("user.home"), tam ulozit xml s nastavenim EplConfig
+- zobrazit v connections src napr. zelene, dests napr. zlute
+- zeptat se na ulozeni pri modifikovanem projektu - dodelano i pri modifikaci connections/aliases
+- nezobrazovat .0 dumb pri v prazdnem src/dest
+- pamatovat si policko pri delete
+- nemenit rozmery tabulky aliasu pri delete/add 
+- odstranit současný panel connections resp. nahradit jej connections table
+3. Nemazat connection při odstranění source. Možná by bylo dobré mazat connection při stisku delete na názvu connection.
+ Je treba vylepsit GUI, udelat to uzivatelsky privetive:
+  - zlepsit panel connections:
+    navrhuji udelat connections ve forme tabulky:
+1. V identifikátoru src/dest musí být číslo nodu, index, subindexu. 
+4. Přidat sloupec zobrazující typ connection (brát podle src)
+9. Protože se ukázalo, že potřebujeme komunikovat i po SDO, je třeba dodělat panel Aliasů. 
+Panel aliasů bude zase tabulka, bude mít dva sloupce. 
+První bude název uživatelsky editovatelný, do druhého se bude dropovat objekt, opět bude zobrazen ve tvaru node.index.subindex případně .domain. 
+Řádky se budou automaticky přidávat/odebírat opět jako v tabulce connections.
+
+2. Udělat editovatelný název.
+6. Automaticky a správně přidávat/odebírat sloupce/řádky.
+5. Tabuka se musí automaticky roztahovat podle panelu příp. dodělat scrollbary. Prostě musí to být "do ruky", aby s tím šlo pracovat.
+do sirky i do vysky, oboji by melo byt osetreno scrollbary
+myslenka je jednoducha: pocet radku bude vzdy o 1 vetsi nez pocet connections a pocet 
+sloupcu vzdy o 1 vetsi nez pocet destinations
+pokud dropnes do posledni radky, vytvori se nova connection a nova radka
+pokud dropnes do posledniho sloupce, vytvori se novy sloupec a nova destination
+zkratka uzivatel vubec neresi new connection, to se deje automaticky
+
+     prvni sloupec bude source, dalsi pak destinations (prvni radek budou popisky)
+     tabulka bude mit minimalne dva sloupce
+     pocet sloupcu destinations se bude automaticky upravovat - vzdy o 1 vetsi nez maximalni pocet destinations v libovolne
+     connections
+
+- prepsat eplindex eplsubindex tak, aby mohli oba obsahovat domain
+  - zeptat se na ulozeni pred ukoncenim pokud byl projekt modifikovan    
+- kdyz dropnu member domeny do connetion, tak se mi tam zobrazi jenom 
+  cislo nodu tecka a nejaky cislo, asi index, muzes to opravit?
+  a navic se pak tyhle source/destination vubec neulozi!
+    
+  - vytvorit MenuBar s nabidkami:
+    File - zde polozky new, open, close| save, save as| recent? , reload | exit (+pouzit oddelovace pro opticke oddeleni)
+    Project - build, insert node, open destination
+  - checkbox advanced view umistit pod treeview
+ - umoznit odstraneni node z projektu
+ - po pridani nove node se v projektu neulozi nazev souboru (SourceFile)
+  - zrusit soucasna horni tlacitka
+  - pouzit vyhradne svobodne ikony <-- zadny uz tam nejsou
+
+ - bug: pokud zmenim hodnotu v panelu properties a kliknu na jiny index/subindex v stromu,
+   zepta se me to, jestli chci ulozit - pokud ano, aktualizuje se polozka ve stromu avsak ne
+   ta spravna ale ta mnou nove oznacena
+ - pri pridani node se nerespektuje Advanced view
+- EplDomain - musi mit index (poradi) a offset (bitovy offset domain memeberu od zacatku) tj.
+            spravne implementovat getIndex
+            spravne implementovat getOffset a getSize - vraci delku v bitech!!
+---> tot je takove osemetne, poradne to nechapu
+ --> si precti specifikaci a podivej se na xdd od BR
+ ----> tam jsem to hledal a nikde jsem to nenasel... co je 'xdd od BR' ?
+
+    -> pokud index jiz existoval ale uzivatel to chce zmenit na 
+    	array/record, pak tohle nepovolis, pokud neexistuje
+    	subindex 00 NumberOfEntries typu byte
+    ->> tady jsem udelal to, ze se NumberOfEntries automaticky vyrobi
+ - pokud je index record nebo array, subindex 00 je vzdy NumberOfEntries, ktery je typu INT8 a je v nem
+   cislo nejvyssiho indexu <- to chces, aby se automaticky vytvarelo? nebo proc to tu je?
+    -> pokud vytvaris index typu array nebo record automaticky ho tam vytvor, 
+    	pokud se array modifikuje (prida/odebere se index)
+    	musi se NumberOfEntries automaticky aktualizovat
+- pokud uzivatel provede akci ihned aktualizovat gui! tj. treeview a panel properties
+ - predelat List<EplSubindex> na Hashtable<Integer, EplSubindex> a 
+            List<EplIndex> objectNodes na Hashtable<Integer, EplIndex>
+  - lze odstranit getSaveProperties? 
+ - v indexu nemohou byt 2 subindexy se stejnym cislem
+ - subindex muze byt pouze var, domain a deftype
+ - pokud je index var, nesmi mit subindexy
+ - pokud je index array vsechny subindexy musi mit stejny typ a to stejny jako index
+ - pokud je index record, nelze u nej nastavit limit, PDO mapping, data type a access type
+spravne editovat atribut PDO (None, TX, RX, both) 
+ - pokud neni index simple type (tj. je record, array), nemuze mit editovatelnou actualvalue a defaultvalue
+ - high a low limit maji pouze ciselne objeky 
+   <-- eh, to znamena co? co jsou ciselne objekty? 
+     <- vyhledej ve specifikaci :)
+       <-- takze objekty, ktere nejsou record a array.
+editovatelne properties projektu:
+ - delka cyklu v us (UINT32) <-- milisekundy?
+ - cas konfigurace (UNIT32 - ms po pulnoci) a datum konfigurace (UINT32 - dny po 1.1.1984)
+   - udelat vedle tlacitko, ktere je naplni podle akt. data/casu
+ -> vsechny properties ukladat do projektu!
+- Cislo indexu je v xdc spatne ulozeno tj. chyba pri prevodu mezi xdc<->gui, co nejfriv opravit! 
+  -> uz snad dobry, zkousel jsem to testovat, tak snad dostatecne
+
+isExportable - ukladat nekam
+XML ulozeni projektu
+ - nelze pridat subindex jez ma hexa znaky
+ podruhe se neulozi connections
+ - nekoncepcni prace s cislem index 
+ 	- vsude by mel byt int
+ 	- pokud je nekde String pak v hex forme
+[10:37:56] <roman> chyba v zobrazeni: subindex se neformatuje ve tvaru XX
+index ma uplne spatny cislo
+[10:38:10] <roman> nelze zadavat cisla ve formatu napr ABCD
+pojmenovat jinak soubory pri ukladani
+EplDomain - getIndex() - opravit!
+ukladat connections
+mazat connections

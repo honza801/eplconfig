@@ -1,0 +1,568 @@
+Model {
+  Name                    "tutor_pidma"
+  Version                 5.0
+  SaveDefaultBlockParams  "on"
+  SampleTimeColors        "off"
+  LibraryLinkDisplay      "none"
+  WideLines               "off"
+  ShowLineDimensions      "off"
+  ShowPortDataTypes       "off"
+  ShowLoopsOnError        "on"
+  IgnoreBidirectionalLines "off"
+  ShowStorageClass        "off"
+  ExecutionOrder          "off"
+  RecordCoverage          "off"
+  CovPath                 "/"
+  CovSaveName             "covdata"
+  CovMetricSettings       "dw"
+  CovNameIncrementing     "off"
+  CovHtmlReporting        "on"
+  covSaveCumulativeToWorkspaceVar "on"
+  CovSaveSingleToWorkspaceVar "on"
+  CovCumulativeVarName    "covCumulativeData"
+  CovCumulativeReport     "off"
+  DataTypeOverride        "UseLocalSettings"
+  MinMaxOverflowLogging   "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip        "off"
+  BlockParametersDataTip  "on"
+  BlockDescriptionStringDataTip "off"
+  ToolBar                 "on"
+  StatusBar               "on"
+  BrowserShowLibraryLinks "off"
+  BrowserLookUnderMasks   "off"
+  Created                 "Mon Dec 30 16:43:09 2002"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "david"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Tue Mar 11 12:30:27 2003"
+  ModelVersionFormat      "1.%<AutoIncrement:39>"
+  ConfigurationManager    "none"
+  SimParamPage            "Solver"
+  LinearizationMsg        "none"
+  Profile                 "off"
+  ParamWorkspaceSource    "MATLABWorkspace"
+  AccelSystemTargetFile   "accel.tlc"
+  AccelTemplateMakefile   "accel_default_tmf"
+  AccelMakeCommand        "make_rtw"
+  TryForcingSFcnDF        "off"
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        "off"
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         "1"
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     "1000"
+  ExtModeTrigHoldOff      "0"
+  ExtModeTrigDelay        "0"
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        "0"
+  ExtModeArchiveMode      "off"
+  ExtModeAutoIncOneShot   "off"
+  ExtModeIncDirWhenArm    "off"
+  ExtModeAddSuffixToVar   "off"
+  ExtModeWriteAllDataToWs "off"
+  ExtModeArmWhenConnect   "off"
+  ExtModeSkipDownloadWhenConnect "off"
+  ExtModeLogAll           "on"
+  ExtModeAutoUpdateStatusClock "on"
+  BufferReuse             "on"
+  RTWExpressionDepthLimit "5"
+  SimulationMode          "normal"
+  Solver                  "FixedStepDiscrete"
+  SolverMode              "Auto"
+  StartTime               "0.0"
+  StopTime                "500.0"
+  MaxOrder                "5"
+  MaxStep                 "auto"
+  MinStep                 "auto"
+  MaxNumMinSteps          "-1"
+  InitialStep             "auto"
+  FixedStep               "0.1"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             "[]"
+  Refine                  "1"
+  LoadExternalInput       "off"
+  ExternalInput           "[t, u]"
+  LoadInitialState        "off"
+  InitialState            "xInitial"
+  SaveTime                "on"
+  TimeSaveName            "tout"
+  SaveState               "off"
+  StateSaveName           "xout"
+  SaveOutput              "on"
+  OutputSaveName          "yout"
+  SaveFinalState          "off"
+  FinalStateName          "xFinal"
+  SaveFormat              "Array"
+  Decimation              "1"
+  LimitDataPoints         "off"
+  MaxDataPoints           "1000"
+  SignalLoggingName       "sigsOut"
+  ConsistencyChecking     "none"
+  ArrayBoundsChecking     "none"
+  AlgebraicLoopMsg        "warning"
+  BlockPriorityViolationMsg "warning"
+  MinStepSizeMsg          "warning"
+  InheritedTsInSrcMsg     "warning"
+  DiscreteInheritContinuousMsg "warning"
+  MultiTaskRateTransMsg   "error"
+  SingleTaskRateTransMsg  "none"
+  CheckForMatrixSingularity "none"
+  IntegerOverflowMsg      "warning"
+  Int32ToFloatConvMsg     "warning"
+  ParameterDowncastMsg    "error"
+  ParameterOverflowMsg    "error"
+  ParameterPrecisionLossMsg "warning"
+  UnderSpecifiedDataTypeMsg "none"
+  UnnecessaryDatatypeConvMsg "none"
+  VectorMatrixConversionMsg "none"
+  InvalidFcnCallConnMsg   "error"
+  SignalLabelMismatchMsg  "none"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  SfunCompatibilityCheckMsg "none"
+  RTWInlineParameters     "off"
+  BlockReductionOpt       "on"
+  BooleanDataType         "off"
+  ConditionallyExecuteInputs "on"
+  ParameterPooling        "on"
+  OptimizeBlockIOStorage  "on"
+  ZeroCross               "on"
+  AssertionControl        "UseLocalSettings"
+  ProdHWDeviceType        "Microprocessor"
+  ProdHWWordLengths       "8,16,32,32"
+  RTWSystemTargetFile     "grt.tlc"
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     "off"
+  RTWRetainRTWFile        "off"
+  TLCProfiler             "off"
+  TLCDebug                "off"
+  TLCCoverage             "off"
+  TLCAssertion            "off"
+  BlockDefaults {
+    Orientation             "right"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "tutor_pidma"
+    Location                "[339, 33, 1007, 407]"
+    Open                    "on"
+    ModelBrowserVisibility  "off"
+    ModelBrowserWidth       "200"
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "usletter"
+    PaperUnits              "inches"
+    ZoomFactor              "100"
+    ReportName              "simulink-default.rpt"
+    #GUID                   7c14bdec-e0b9-4010-be12-ded0f0a0a3b1
+    Block {
+      BlockType               Reference
+      Name                    "CNB_1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [545, 78, 560, 92]
+      SourceBlock             "mathlib/CNB"
+      ShowName                "on"
+      NamePlacement           ""
+      YCN                     "on"
+      #GUID                   2845f7d7-b515-4f15-aa39-a6b9c6d045c9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_MAN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [85, 143, 100, 157]
+      SourceBlock             "mathlib/CNB"
+      ShowName                "on"
+      NamePlacement           ""
+      YCN                     "on"
+      #GUID                   9c1ec390-70c1-4b2a-b51b-66cefcc8ee1a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_TAFF"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [205, 203, 220, 217]
+      SourceBlock             "mathlib/CNB"
+      ShowName                "on"
+      NamePlacement           ""
+      YCN                     "on"
+      #GUID                   47856b36-d4d8-4bca-915f-3a22fe10bf38
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_hv"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 128, 60, 142]
+      SourceBlock             "mathlib/CNR"
+      ShowName                "on"
+      NamePlacement           ""
+      ycn                     "0"
+      #GUID                   828cdca6-d76a-485a-af69-8b537ad85c32
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_sp"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 83, 40, 97]
+      SourceBlock             "mathlib/CNR"
+      ShowName                "on"
+      NamePlacement           ""
+      ycn                     "0.5"
+      #GUID                   c31e8ce2-6585-400e-90cb-d6d742f9b199
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [280, 50, 290, 60]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      BackgroundColor         "lightBlue"
+      ShowName                "off"
+      SourceType              ""
+      #GUID                   d1904b6a-ceed-4016-adca-d93d79206deb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [290, 250, 300, 260]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      BackgroundColor         "lightBlue"
+      ShowName                "off"
+      SourceType              ""
+      #GUID                   a11355cb-bd49-4429-8e6a-9fa2e14e9de1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_TBRK"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [165, 188, 180, 202]
+      SourceBlock             "genlib/MP"
+      ShowName                "on"
+      NamePlacement           ""
+      pwidth                  "1"
+      BSTATE                  "off"
+      RPTF                    "off"
+      #GUID                   d2a4ba54-1708-4ac0-bde6-dde7bf5f6f43
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_TUNE"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [120, 173, 135, 187]
+      SourceBlock             "genlib/MP"
+      ShowName                "on"
+      NamePlacement           ""
+      pwidth                  "1"
+      BSTATE                  "off"
+      RPTF                    "off"
+      #GUID                   b53ff1d0-29a2-4b26-ac7b-139611311bff
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PIDMA"
+      Ports                   [11, 14, 0, 0, 0]
+      Position                [260, 69, 315, 231]
+      SourceBlock             "reglib/PIDMA"
+      ShowName                "on"
+      NamePlacement           ""
+      irtype                  "6"
+      RACT                    "off"
+      k                       "1"
+      ti                      "5.5"
+      td                      "0"
+      nd                      "4"
+      b                       "1"
+      c                       "0"
+      tt                      "1"
+      hilim                   "1"
+      lolim                   "-1"
+      dz                      "0"
+      icotype                 "1"
+      ittype                  "7"
+      iainf                   "1"
+      DGC                     "off"
+      tdg                     "1"
+      tn                      "2"
+      amp                     "0.2"
+      dy                      "0.1"
+      ispeed                  "2"
+      ipid                    "1"
+      BackgroundColor         "lightBlue"
+      #GUID                   82c9c1ba-121c-4352-ad44-3bb17bff1b07
+    }
+    Block {
+      BlockType               SubSystem
+      Name                    "PROCESS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [70, 243, 110, 267]
+      NamePlacement           ""
+      ShowName                "on"
+      FontSize                "10"
+      BackgroundColor         "yellow"
+      ShowPortLabels          "on"
+      MaskType                "REX sequence"
+      MaskTunableValueString  "on"
+      MaskEnableString        "on"
+      MaskVisibilityString    "on"
+      MaskIconFrame           "on"
+      MaskIconOpaque          "on"
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      MaskPromptString        "process_gain"
+      MaskStyleString         "edit"
+      MaskVariables           "kp=@1"
+      MaskValueString         ""
+      #GUID                   ae33cd22-56f7-4f3b-873d-f5d310c328cb
+      System {
+        Name                    "PROCESS"
+        Location                "[50, 90, 409, 356]"
+        #GUID                   b50d5c6f-b7d0-40d1-9a33-ec007ff6b517
+        Block {
+          BlockType               Reference
+          Name                    "CNDR_1"
+          Ports                   [1, 2, 0, 0, 0]
+          Position                [135, 33, 165, 67]
+          SourceBlock             "reglib/CNDR"
+          ShowName                "on"
+          NamePlacement           ""
+          n                       "2"
+          SATF                    "off"
+          up                      "[-2.0 2.0]"
+          yp                      "[-2.0 2.0]"
+          BackgroundColor         "yellow"
+          #GUID                   31a604da-f53f-4498-873a-01cfb01184a1
+        }
+        Block {
+          BlockType               Reference
+          Name                    "MDL_process"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [195, 33, 220, 47]
+          SourceBlock             "reglib/MDL"
+          ShowName                "on"
+          NamePlacement           ""
+          k0                      "kp"
+          del                     "2"
+          tau1                    "5"
+          tau2                    "2"
+          BackgroundColor         "yellow"
+          #GUID                   c5e2c055-769f-4564-a4e4-ef40ad8b07da
+        }
+        Block {
+          BlockType               Inport
+          Name                    "u"
+          Position                [80, 43, 110, 57]
+          Port                    "1"
+          ShowName                "on"
+          NamePlacement           ""
+          #GUID                   120c719e-2451-4f50-b5d9-03ed10e6fb85
+        }
+        Block {
+          BlockType               Outport
+          Name                    "y"
+          Position                [255, 33, 285, 47]
+          Port                    "1"
+          ShowName                "on"
+          NamePlacement           ""
+          #GUID                   47525cc5-0fcc-4b3a-9931-07f068785099
+        }
+        Line {
+          SrcBlock                "CNDR_1"
+          SrcPort                 1
+          DstBlock                "MDL_process"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "MDL_process"
+          SrcPort                 1
+          DstBlock                "y"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "u"
+          SrcPort                 1
+          DstBlock                "CNDR_1"
+          DstPort                 1
+        }
+      }
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SOPDT_1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [405, 78, 430, 92]
+      SourceBlock             "reglib/SOPDT"
+      ShowName                "on"
+      NamePlacement           ""
+      itf                     "3"
+      k0                      "10"
+      tau                     "0"
+      tau1                    "1"
+      tau2                    "1"
+      om                      "0.2"
+      ksi                     "0.6"
+      del                     "0"
+      pb0                     "1"
+      pb1                     "1"
+      pa0                     "1"
+      pa1                     "1"
+      #GUID                   f4c0db1c-09df-4702-ae54-0a2f726522b8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_PIDMA"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [600, 32, 645, 108]
+      SourceBlock             "arclib/TRND"
+      ShowName                "on"
+      NamePlacement           ""
+      n                       "3"
+      l                       "100"
+      btype                   "8"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    "1"
+      afac                    "0"
+      arc                     0
+      id                      "1"
+      Title                   "Trend Title"
+      #GUID                   55d57578-67fc-4886-afd6-5982f258f54e
+    }
+    Line {
+      SrcBlock                "CNB_1"
+      SrcPort                 1
+      DstBlock                "TRND_PIDMA"
+      DstPort                 5
+    }
+    Line {
+      SrcBlock                "CNB_MAN"
+      SrcPort                 1
+      DstBlock                "PIDMA"
+      DstPort                 6
+    }
+    Line {
+      SrcBlock                "CNB_TAFF"
+      SrcPort                 1
+      DstBlock                "PIDMA"
+      DstPort                 10
+    }
+    Line {
+      SrcBlock                "CNR_hv"
+      SrcPort                 1
+      DstBlock                "PIDMA"
+      DstPort                 5
+    }
+    Line {
+      SrcBlock                "CNR_sp"
+      SrcPort                 1
+      Points                  [155, 0]
+      Branch {
+        DstBlock                "PIDMA"
+        DstPort                 2
+      }
+      Branch {
+        Points                  [0, -65; 320, 0; 0, 20]
+        DstBlock                "TRND_PIDMA"
+        DstPort                 1
+      }
+    }
+    Line {
+      SrcBlock                "LPBRK"
+      SrcPort                 1
+      Points                  [-45, 0; 0, 65]
+      DstBlock                "PIDMA"
+      DstPort                 4
+    }
+    Line {
+      SrcBlock                "LPBRK1"
+      SrcPort                 1
+      Points                  [-45, 0; 0, -150]
+      DstBlock                "PIDMA"
+      DstPort                 3
+    }
+    Line {
+      SrcBlock                "MP_TBRK"
+      SrcPort                 1
+      DstBlock                "PIDMA"
+      DstPort                 9
+    }
+    Line {
+      SrcBlock                "MP_TUNE"
+      SrcPort                 1
+      DstBlock                "PIDMA"
+      DstPort                 8
+    }
+    Line {
+      SrcBlock                "PIDMA"
+      SrcPort                 1
+      Points                  [10, 0]
+      Branch {
+        DstBlock                "SOPDT_1"
+        DstPort                 1
+      }
+      Branch {
+        Points                  [0, -30]
+        Branch {
+          DstBlock                "LPBRK"
+          DstPort                 1
+        }
+        Branch {
+          DstBlock                "TRND_PIDMA"
+          DstPort                 2
+        }
+      }
+    }
+    Line {
+      SrcBlock                "SOPDT_1"
+      SrcPort                 1
+      Points                  [60, 0]
+      Branch {
+        Points                  [0, 170]
+        DstBlock                "LPBRK1"
+        DstPort                 1
+      }
+      Branch {
+        Points                  [0, -20]
+        DstBlock                "TRND_PIDMA"
+        DstPort                 3
+      }
+    }
+  }
+}

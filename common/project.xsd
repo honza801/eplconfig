@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="CfgProject">
+    <xs:complexType>
+      <xs:sequence>
+      	<xs:element ref="Name" />
+      	<xs:element ref="CycleLength" />
+      	<xs:element ref="AdvancedView" />
+      	<xs:element ref="CfgNodes" />
+      	<xs:element ref="CfgConnections"></xs:element>
+      	<xs:element ref="ConfigurationTime"></xs:element>
+      	<xs:element ref="ConfigurationDate"></xs:element>
+      	<xs:element ref="CfgAliases"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CycleLength" type="xs:int"/>
+  <xs:element name="AdvancedView" type="xs:boolean"/>
+  <xs:element name="CfgNodes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="CfgNode"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CfgNode">
+    <xs:complexType>
+      <xs:sequence>
+      	<xs:element minOccurs="1" ref="Name" maxOccurs="1" />
+      	<xs:element ref="Number" maxOccurs="1" minOccurs="1" />
+      	<xs:element ref="RexNode" maxOccurs="1" minOccurs="1" />
+      	<xs:element ref="SourceFile" maxOccurs="1" minOccurs="1" />
+      	<xs:element ref="CfgIndexes" maxOccurs="1" minOccurs="1" />
+      	<xs:element ref="Disabled" maxOccurs="1" minOccurs="0"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsRex" type="xs:boolean"/>
+  <xs:element name="SourceFile" type="xs:string"/>
+  <xs:element name="CfgIndexes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CfgIndex" maxOccurs="unbounded" minOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CfgIndex">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Number"/>
+        <xs:element ref="UserObject"/>
+        <xs:element ref="CdcExportable"/>
+        <xs:element ref="CfgSubindexes" maxOccurs="1" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CfgSubindexes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="CfgSubindex" maxOccurs="unbounded" minOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CfgSubindex">
+    <xs:complexType>
+      <xs:sequence>
+      	<xs:element ref="Number" />
+      	<xs:element ref="CdcExportable" />
+      	<xs:element name="UserObject" type="xs:boolean"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Name" type="xs:string"/>
+  <xs:element name="Number" type="xs:int"/>
+  <xs:element name="CdcExportable" type="xs:boolean"/>
+
+    <xs:element name="UserObject" type="xs:boolean"></xs:element>
+
+    <xs:element name="RexNode" type="xs:boolean"></xs:element>
+
+
+    
+
+
+
+    <xs:element name="CfgConnections">
+    	<xs:complexType>
+    		<xs:sequence>
+    			<xs:element ref="CfgConnection" maxOccurs="unbounded" minOccurs="0"></xs:element>
+    		</xs:sequence>
+    	</xs:complexType></xs:element>
+
+
+    <xs:element name="CfgConnection">
+    	<xs:complexType>
+    		<xs:sequence>
+    			<xs:element name="Source" type="CfgDataIdent"
+    				maxOccurs="1" minOccurs="1">
+    			</xs:element>
+    			<xs:element name="Destination" type="CfgDataIdent"
+    				maxOccurs="unbounded" minOccurs="1">
+    			</xs:element>
+    			<xs:element name="Name" type="xs:string"></xs:element>
+    		</xs:sequence>
+    	</xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="CfgDataIdent">
+    	<xs:sequence>
+    		<xs:element name="Node" type="xs:int" maxOccurs="1" minOccurs="1"></xs:element>
+    		<xs:element name="Index" type="xs:int" maxOccurs="1" minOccurs="1"></xs:element>
+    		<xs:element name="Subindex" type="xs:int" maxOccurs="1" minOccurs="0"></xs:element>
+    		<xs:element name="DomainPart" type="xs:int" maxOccurs="1"
+    			minOccurs="0">
+    		</xs:element>
+    	</xs:sequence>
+    </xs:complexType>
+
+
+    <xs:element name="ConfigurationTime" type="xs:long"></xs:element>
+
+    <xs:element name="ConfigurationDate" type="xs:long"></xs:element>
+
+    <xs:element name="Disabled" type="xs:boolean"></xs:element>
+
+    <xs:element name="CfgAliases">
+    	<xs:complexType>
+    		<xs:sequence>
+    			<xs:element ref="CfgAlias" maxOccurs="unbounded" minOccurs="0"></xs:element>
+    		</xs:sequence>
+    	</xs:complexType></xs:element>
+
+    <xs:element name="CfgAlias">
+    	<xs:complexType>
+    		<xs:sequence>
+    			<xs:element ref="Label"></xs:element>
+    			<xs:element ref="Destination"></xs:element>
+            </xs:sequence>
+    	</xs:complexType></xs:element>
+
+    <xs:element name="Label" type="xs:string"></xs:element>
+
+    <xs:element name="Destination" type="CfgDataIdent"></xs:element>
+
+</xs:schema>

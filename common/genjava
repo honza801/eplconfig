@@ -1,0 +1,13 @@
+#!/bin/bash
+
+JAVA=""
+TRANG="trang"
+XML="project.xml"
+XSD="project.xsd"
+
+[ ! -f $XML ] && { echo "File $XML does not exist."; exit 1; }
+
+#${TRANG} $XML $XSD
+${JAVA}xjc $XSD -d ../src -p cz.rexcontrols.epl.editor.project
+#${JAVA}xjc configuration.xsd -d ../src/ -p cz.rexcontrols.epl.editor.cconfigurator
+

@@ -1,0 +1,4540 @@
+Model {
+  Name                    "motor"
+  Version                 3.00
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "motor"
+    Location                [373, 98, 1808, 528]
+    #GUID                   c195aae5-caf4-4e50-a595-c1748720936a
+    Block {
+      BlockType               Reference
+      Name                    "ADD_1"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [530, 208, 555, 242]
+      SourceBlock             "mathlib/ADD"
+      ShowName                on
+      NamePlacement           ""
+      #GUID                   5a27293d-40c9-414a-b4fc-0b3758ea953e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ADD_2"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [605, 203, 630, 237]
+      SourceBlock             "mathlib/ADD"
+      ShowName                on
+      NamePlacement           ""
+      #GUID                   35f8f948-e04d-44e9-a297-f800b59a7dda
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ADD_3"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [600, 118, 625, 152]
+      SourceBlock             "mathlib/ADD"
+      ShowName                on
+      NamePlacement           ""
+      #GUID                   15ae6923-cc25-4cff-af79-cdb29efe3450
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [195, 173, 210, 187]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      #GUID                   bbedebe8-9383-47af-9b61-abfca7b6659b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [540, 173, 555, 187]
+      SourceBlock             "mathlib/CNI"
+      ShowName                on
+      NamePlacement           ""
+      icn                     15
+      #GUID                   4b957de8-5c2f-480a-8eb3-3da77c40140a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [475, 93, 490, 107]
+      SourceBlock             "mathlib/CNI"
+      ShowName                on
+      NamePlacement           ""
+      icn                     3
+      #GUID                   f96bd320-08b6-46e4-a3dc-51d590186f1c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [395, 223, 410, 237]
+      SourceBlock             "mathlib/CNI"
+      ShowName                on
+      NamePlacement           ""
+      icn                     64
+      #GUID                   0e588262-7c86-4f1e-8ffd-e9266a49c4c7
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [545, 148, 560, 162]
+      SourceBlock             "mathlib/CNI"
+      ShowName                on
+      NamePlacement           ""
+      icn                     0
+      #GUID                   011ae9e4-a0a5-485a-807c-81b150b429ab
+    }
+    Block {
+      BlockType               From
+      Name                    "From_1"
+      Position                [50, 40, 195, 60]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "EPL__StatusWord"
+      #GUID                   7c9ab879-f0fa-43e8-8957-dc4145692335
+    }
+    Block {
+      BlockType               From
+      Name                    "From_2"
+      Position                [50, 70, 195, 90]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "EPL__PositionActual"
+      #GUID                   ef5beb9e-bf43-4b15-91e3-dc4073ae6671
+    }
+    Block {
+      BlockType               From
+      Name                    "From_3"
+      Position                [50, 100, 195, 120]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "EPL__VelocityActual"
+      #GUID                   b03fc1d9-1a8f-4504-a6e3-67b69316121d
+    }
+    Block {
+      BlockType               From
+      Name                    "From_4"
+      Position                [50, 130, 195, 150]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "EPL__TorqueActual"
+      #GUID                   291a3ca1-090a-46b7-8b8c-1a49011a7c34
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_1"
+      Position                [720, 200, 835, 220]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "EPL__ControlWord"
+      TagVisibility           "local"
+      #GUID                   1d739e0c-ee57-4a21-aceb-5f25cc6ffd6c
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_2"
+      Position                [675, 145, 790, 165]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "EPL__VelocityTarget"
+      TagVisibility           "local"
+      #GUID                   aee5cbf6-6e3e-4ad5-a735-d26e08f06ac7
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_3"
+      Position                [665, 95, 780, 115]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "EPL__OpMode"
+      TagVisibility           "local"
+      #GUID                   ee22b802-1615-4841-96fc-8e8446dd2c5a
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_4"
+      Position                [370, 328, 490, 342]
+      BackgroundColor         [0.741176, 0.074510, 0.411765]
+      ShowName                off
+      GotoTag                 "OUT_sp_ArmV"
+      TagVisibility           "global"
+      #GUID                   4f425683-8916-4833-ae10-3cd1c4f37fa6
+    }
+    Block {
+      BlockType               SubSystem
+      Name                    "REX_Control_Algorithm"
+      Ports                   [3, 1, 0, 0, 0]
+      Position                [190, 298, 345, 372]
+      BackgroundColor         [0.666667, 0.725490, 0.901961]
+      TreatAsAtomicUnit       on
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      SystemSampleTime        "0.003"
+      RTWSystemCode           "Auto"
+      FunctionWithSeparateData off
+      Opaque                  off
+      RequestExecContextInheritance off
+      MaskHideContents        off
+      ShowPortLabels          on
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   999b39f2-64a2-4fa3-b074-1e92a93ff2b5
+      System {
+        Name                    "REX_Control_Algorithm"
+        Location                [198, 114, 1123, 787]
+        Open                    on
+        ModelBrowserVisibility  off
+        ModelBrowserWidth       200
+        ScreenColor             "white"
+        PaperOrientation        "portrait"
+        PaperPositionMode       "auto"
+        PaperType               "A4"
+        PaperUnits              "centimeters"
+        TiledPaperMargins       [1.270000, 1.270000, 1.270000, 1.270000]
+        TiledPageScale          1
+        ShowPageBoundaries      off
+        ZoomFactor              100
+        #GUID                   49b45d0a-53bc-49e4-9918-bf54d2fc3193
+        Block {
+          BlockType               Inport
+          Name                    "PendP"
+          Position                [15, 28, 45, 42]
+          Port                    1
+          BackgroundColor         [0.933333, 0.662745, 0.800000]
+          IconDisplay             "Port number"
+          #GUID                   82f975c4-3941-4e63-af73-eb6fdede98f5
+        }
+        Block {
+          BlockType               Inport
+          Name                    "ArmP"
+          Position                [15, 68, 45, 82]
+          Port                    2
+          BackgroundColor         [0.933333, 0.662745, 0.800000]
+          IconDisplay             "Port number"
+          #GUID                   da89cb34-74f1-4425-960d-94f7e6ce5d09
+        }
+        Block {
+          BlockType               Inport
+          Name                    "ArmV"
+          Position                [15, 108, 45, 122]
+          Port                    3
+          BackgroundColor         [0.933333, 0.662745, 0.800000]
+          IconDisplay             "Port number"
+          #GUID                   e59dc636-8098-465d-8821-fcaaae47d1ac
+        }
+        Block {
+          BlockType               Reference
+          Name                    "ATMT"
+          Ports                   [20, 19, 0, 0, 0]
+          Position                [210, 200, 265, 410]
+          SourceBlock             "logiclib/ATMT"
+          BackgroundColor         [0.666667, 0.901961, 0.901961]
+          SourceType              "ATMT"
+          ShowPortLabels          "FromPortIcon"
+          SystemSampleTime        -1
+          FunctionWithSeparateData off
+          RTWMemSecFuncInitTerm   "Inherit from model"
+          RTWMemSecFuncExecute    "Inherit from model"
+          RTWMemSecDataConstants  "Inherit from model"
+          RTWMemSecDataInternal   "Inherit from model"
+          RTWMemSecDataParameters "Inherit from model"
+          morestps                off
+          ntr                     10
+          STT                     "[0 0 1;1 1 2;1 15 0;2 3 3;3 15 4;4 15 10;10"
+" 2 0;2 10 0;3 10 0;4 10 0]"
+          touts                   [100 1 20 10 10 0 0 0 0 0 5 0 0 0 0 0]
+          #GUID                   ad7e5094-05d8-4872-a373-513c767134bc
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNR_alpha_setpoint"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [465, 89, 505, 101]
+          SourceBlock             "mathlib/CNR"
+          NamePlacement           "alternate"
+          SourceType              "CNR"
+          ShowPortLabels          "FromPortIcon"
+          SystemSampleTime        -1
+          FunctionWithSeparateData off
+          RTWMemSecFuncInitTerm   "Inherit from model"
+          RTWMemSecFuncExecute    "Inherit from model"
+          RTWMemSecDataConstants  "Inherit from model"
+          RTWMemSecDataInternal   "Inherit from model"
+          RTWMemSecDataParameters "Inherit from model"
+          ycn                     0
+          #GUID                   cfa76510-69ad-4169-a569-d8c536a81810
+        }
+        Block {
+          BlockType               From
+          Name                    "From"
+          Position                [435, 268, 545, 282]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "alpha_vel"
+          TagVisibility           "global"
+          #GUID                   eb96f525-c4f6-4e0c-b572-37fd96405bed
+        }
+        Block {
+          BlockType               From
+          Name                    "From1"
+          Position                [420, 508, 485, 522]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "Q2"
+          #GUID                   a87d99c5-deaa-408d-8a2c-840ded7e86bd
+        }
+        Block {
+          BlockType               From
+          Name                    "From10"
+          Position                [435, 103, 545, 117]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "alpha"
+          TagVisibility           "global"
+          #GUID                   31676572-7fed-438c-8f07-775a4b755620
+        }
+        Block {
+          BlockType               From
+          Name                    "From11"
+          Position                [120, 628, 240, 642]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "beta_down"
+          TagVisibility           "global"
+          #GUID                   ff05b36f-6e38-4aa6-86ac-db17b1171d37
+        }
+        Block {
+          BlockType               From
+          Name                    "From12"
+          Position                [435, 153, 540, 167]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "Q0"
+          #GUID                   a0d56230-41d7-4e74-b301-5ec055415ded
+        }
+        Block {
+          BlockType               From
+          Name                    "From13"
+          Position                [435, 183, 545, 197]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "beta_down"
+          TagVisibility           "global"
+          #GUID                   b4b7f7fc-686b-4590-8add-a3182dcad438
+        }
+        Block {
+          BlockType               From
+          Name                    "From14"
+          Position                [435, 283, 545, 297]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "alpha"
+          TagVisibility           "global"
+          #GUID                   d8a9a2e3-82e5-465d-bfc5-c87c3f3fc62f
+        }
+        Block {
+          BlockType               From
+          Name                    "From15"
+          Position                [435, 298, 545, 312]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "beta_up"
+          TagVisibility           "global"
+          #GUID                   e4fa1a13-2b4b-4d5f-bc62-49617b0678cf
+        }
+        Block {
+          BlockType               From
+          Name                    "From16"
+          Position                [435, 313, 545, 327]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "beta_vel"
+          TagVisibility           "global"
+          #GUID                   04a77370-4c96-4fa4-a053-daa0480f839d
+        }
+        Block {
+          BlockType               From
+          Name                    "From17"
+          Position                [45, 478, 155, 492]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "beta_down_start"
+          #GUID                   b5e04bd2-8bbc-4836-bb08-1541d2272b91
+        }
+        Block {
+          BlockType               From
+          Name                    "From18"
+          Position                [15, 253, 110, 267]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "UPRIGHT"
+          #GUID                   d6870c86-82d6-4ee5-91ec-adfaff269859
+        }
+        Block {
+          BlockType               From
+          Name                    "From19"
+          Position                [435, 388, 540, 402]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "UPRIGHT"
+          #GUID                   6ae7831d-7598-4edb-86d6-ef644aa790a8
+        }
+        Block {
+          BlockType               From
+          Name                    "From2"
+          Position                [420, 528, 485, 542]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "Q3"
+          #GUID                   4216ddef-3b68-4e95-b034-4b95b2eb9b25
+        }
+        Block {
+          BlockType               From
+          Name                    "From20"
+          Position                [435, 373, 540, 387]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "Q10"
+          #GUID                   fdb50281-c779-425d-acc7-f695cf2664b9
+        }
+        Block {
+          BlockType               From
+          Name                    "From21"
+          Position                [435, 403, 545, 417]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "alpha_vel"
+          TagVisibility           "global"
+          #GUID                   f2d34fa7-92f1-492f-be77-a34d73b5d695
+        }
+        Block {
+          BlockType               From
+          Name                    "From22"
+          Position                [435, 418, 545, 432]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "alpha"
+          TagVisibility           "global"
+          #GUID                   82ff9836-ae55-4b31-b6cd-b12e2dea8f2f
+        }
+        Block {
+          BlockType               From
+          Name                    "From23"
+          Position                [435, 433, 545, 447]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "beta_down"
+          TagVisibility           "global"
+          #GUID                   abd0df8a-38ef-4d97-ab47-391ef95f6e5c
+        }
+        Block {
+          BlockType               From
+          Name                    "From24"
+          Position                [435, 448, 545, 462]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "beta_vel"
+          TagVisibility           "global"
+          #GUID                   964839a9-ff33-40a8-aae2-a8dbadfcd9ec
+        }
+        Block {
+          BlockType               From
+          Name                    "From25"
+          Position                [15, 268, 110, 282]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "HANGING"
+          #GUID                   a901152e-3bfb-4e10-ae82-a66ab992016f
+        }
+        Block {
+          BlockType               From
+          Name                    "From26"
+          Position                [45, 463, 165, 477]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "beta_up"
+          TagVisibility           "global"
+          #GUID                   80704958-e3aa-4eb0-87aa-a19435d494d3
+        }
+        Block {
+          BlockType               From
+          Name                    "From27"
+          Position                [435, 223, 540, 237]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "Q2"
+          #GUID                   5ebd2b86-cd0b-400f-8481-cdb724e8c0d6
+        }
+        Block {
+          BlockType               From
+          Name                    "From28"
+          Position                [15, 283, 110, 297]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "TOUT"
+          #GUID                   857efc03-d459-4a71-a1f3-2c9f59eff072
+        }
+        Block {
+          BlockType               From
+          Name                    "From29"
+          Position                [15, 303, 115, 317]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "END_CENTER"
+          #GUID                   9df2555f-6c23-4c7e-b1a1-b3dc9340e2be
+        }
+        Block {
+          BlockType               From
+          Name                    "From3"
+          Position                [420, 548, 485, 562]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "Q4"
+          #GUID                   ac721b4f-8ef1-4612-b8b9-4c8648bc9550
+        }
+        Block {
+          BlockType               From
+          Name                    "From30"
+          Position                [435, 238, 540, 252]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "Q3"
+          #GUID                   1468423b-d923-4998-bc81-f30836c00423
+        }
+        Block {
+          BlockType               From
+          Name                    "From31"
+          Position                [15, 393, 110, 407]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "TOUT"
+          #GUID                   84b14bc6-158a-4c79-aca1-e3f208ba110e
+        }
+        Block {
+          BlockType               From
+          Name                    "From32"
+          Position                [15, 343, 110, 357]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "UPRIGHT"
+          #GUID                   ac42f23a-1873-45d7-a37d-f224730328d8
+        }
+        Block {
+          BlockType               From
+          Name                    "From33"
+          Position                [435, 18, 545, 32]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "beta_up"
+          TagVisibility           "global"
+          #GUID                   84cfe1e9-1fa6-480a-8f09-c6e329d3b086
+        }
+        Block {
+          BlockType               From
+          Name                    "From34"
+          Position                [435, 33, 545, 47]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "beta_down_start"
+          #GUID                   00596819-72d7-45b2-87bc-0c011bd85f0c
+        }
+        Block {
+          BlockType               From
+          Name                    "From35"
+          Position                [435, 463, 545, 477]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "beta_down_start"
+          #GUID                   37d23f95-1883-4707-9563-3e295b94425e
+        }
+        Block {
+          BlockType               From
+          Name                    "From36"
+          Position                [435, 328, 545, 342]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "beta_down_start"
+          #GUID                   bf7d4a9e-1279-4619-8cc9-ee7108329e2e
+        }
+        Block {
+          BlockType               From
+          Name                    "From37"
+          Position                [435, 253, 540, 267]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "Q4"
+          #GUID                   bb705f65-58de-4a07-bbfc-7edd55080707
+        }
+        Block {
+          BlockType               From
+          Name                    "From4"
+          Position                [120, 528, 240, 542]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "alpha"
+          TagVisibility           "global"
+          #GUID                   1914bd26-2d5f-468e-b9d8-e961ae9b4262
+        }
+        Block {
+          BlockType               From
+          Name                    "From5"
+          Position                [435, 168, 540, 182]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "Q1"
+          #GUID                   5462005b-8109-4cbe-9ab4-d00477274db8
+        }
+        Block {
+          BlockType               From
+          Name                    "From6"
+          Position                [420, 568, 485, 582]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "Q10"
+          #GUID                   09551758-9bb4-4a05-a837-8d3985243e91
+        }
+        Block {
+          BlockType               From
+          Name                    "From7"
+          Position                [420, 608, 485, 622]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "Q1"
+          #GUID                   4d83d7b0-60a9-4950-a5f7-9a4a4a1c897b
+        }
+        Block {
+          BlockType               From
+          Name                    "From8"
+          Position                [420, 628, 485, 642]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "Q10"
+          #GUID                   c6241920-9a69-493e-837c-fa78ebe8b880
+        }
+        Block {
+          BlockType               From
+          Name                    "From9"
+          Position                [120, 578, 240, 592]
+          ShowName                off
+          CloseFcn                "tagdialog Close"
+          GotoTag                 "beta_up"
+          TagVisibility           "global"
+          #GUID                   1a6e5baf-27e7-4681-8e0f-45ca3df39570
+        }
+        Block {
+          BlockType               Goto
+          Name                    "Goto"
+          Position                [330, 18, 410, 32]
+          ShowName                off
+          GotoTag                 "alpha"
+          TagVisibility           "global"
+          #GUID                   833922a4-24b3-474b-9903-7fcb4decbbec
+        }
+        Block {
+          BlockType               Goto
+          Name                    "Goto1"
+          Position                [330, 68, 410, 82]
+          ShowName                off
+          GotoTag                 "beta_up"
+          TagVisibility           "global"
+          #GUID                   65fe94d3-ab64-4da6-87d5-42ca280bb794
+        }
+        Block {
+          BlockType               Goto
+          Name                    "Goto11"
+          Position                [285, 208, 335, 222]
+          ShowName                off
+          GotoTag                 "Q0"
+          TagVisibility           "local"
+          #GUID                   fcdc3609-6d8d-43f6-bed8-de5e22a81576
+        }
+        Block {
+          BlockType               Goto
+          Name                    "Goto12"
+          Position                [355, 218, 405, 232]
+          ShowName                off
+          GotoTag                 "Q1"
+          TagVisibility           "local"
+          #GUID                   b88e9a9b-ce01-4483-8aaa-36d684714339
+        }
+        Block {
+          BlockType               Goto
+          Name                    "Goto13"
+          Position                [285, 228, 335, 242]
+          ShowName                off
+          GotoTag                 "Q2"
+          TagVisibility           "local"
+          #GUID                   73c953d6-c003-43fd-a40d-358e29e9c212
+        }
+        Block {
+          BlockType               Goto
+          Name                    "Goto14"
+          Position                [355, 238, 405, 252]
+          ShowName                off
+          GotoTag                 "Q3"
+          TagVisibility           "local"
+          #GUID                   182b1bdf-d880-4cd6-a145-bb96818e9cb2
+        }
+        Block {
+          BlockType               Goto
+          Name                    "Goto15"
+          Position                [285, 248, 335, 262]
+          ShowName                off
+          GotoTag                 "Q4"
+          TagVisibility           "local"
+          #GUID                   facf48ef-65c7-4a0f-ba89-05f6d23878cb
+        }
+        Block {
+          BlockType               Goto
+          Name                    "Goto16"
+          Position                [285, 308, 335, 322]
+          ShowName                off
+          GotoTag                 "Q10"
+          TagVisibility           "local"
+          #GUID                   4e5622e7-b33e-49cc-86a2-fe4678fd044c
+        }
+        Block {
+          BlockType               Goto
+          Name                    "Goto17"
+          Position                [790, 448, 910, 462]
+          ShowName                off
+          GotoTag                 "HANGING"
+          TagVisibility           "local"
+          #GUID                   0fb85f61-522d-410c-a420-08003674e146
+        }
+        Block {
+          BlockType               Goto
+          Name                    "Goto18"
+          Position                [790, 308, 910, 322]
+          ShowName                off
+          GotoTag                 "END_CENTER"
+          TagVisibility           "local"
+          #GUID                   89e46c7f-a0b0-45b5-9e85-809c7cdca228
+        }
+        Block {
+          BlockType               Goto
+          Name                    "Goto19"
+          Position                [285, 388, 335, 402]
+          ShowName                off
+          GotoTag                 "TOUT"
+          TagVisibility           "local"
+          #GUID                   d2d8f89a-0c71-4b8e-9b44-929fb690aa93
+        }
+        Block {
+          BlockType               Goto
+          Name                    "Goto2"
+          Position                [790, 183, 910, 197]
+          ShowName                off
+          GotoTag                 "beta_down_start"
+          TagVisibility           "local"
+          #GUID                   66f5283e-4bb6-46d3-bd17-170d4d2430d9
+        }
+        Block {
+          BlockType               Goto
+          Name                    "Goto3"
+          Position                [745, 28, 835, 42]
+          ShowName                off
+          GotoTag                 "UPRIGHT"
+          TagVisibility           "local"
+          #GUID                   08aade85-6dd7-4b71-a055-f2e52cfb4914
+        }
+        Block {
+          BlockType               Goto
+          Name                    "Goto7"
+          Position                [330, 43, 410, 57]
+          ShowName                off
+          GotoTag                 "alpha_vel"
+          TagVisibility           "global"
+          #GUID                   02be16d5-7b9c-4271-ae7d-434b8640f87c
+        }
+        Block {
+          BlockType               Goto
+          Name                    "Goto8"
+          Position                [330, 93, 410, 107]
+          ShowName                off
+          GotoTag                 "beta_down"
+          TagVisibility           "global"
+          #GUID                   b85e4248-bd9c-4a6c-a06e-3b1a880aab39
+        }
+        Block {
+          BlockType               Goto
+          Name                    "Goto9"
+          Position                [330, 118, 410, 132]
+          ShowName                off
+          GotoTag                 "beta_vel"
+          TagVisibility           "global"
+          #GUID                   3a64bb12-ece5-447b-af12-4a92f065c719
+        }
+        Block {
+          BlockType               Reference
+          Name                    "HOLD"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [150, 232, 180, 248]
+          SourceBlock             "mathlib/CNB"
+          NamePlacement           "alternate"
+          SourceType              "CNB"
+          ShowPortLabels          "FromPortIcon"
+          SystemSampleTime        -1
+          FunctionWithSeparateData off
+          RTWMemSecFuncInitTerm   "Inherit from model"
+          RTWMemSecFuncExecute    "Inherit from model"
+          RTWMemSecDataConstants  "Inherit from model"
+          RTWMemSecDataInternal   "Inherit from model"
+          RTWMemSecDataParameters "Inherit from model"
+          YCN                     off
+          #GUID                   d3fb6679-8f87-4d4f-a7e8-f2d61bfd5cac
+        }
+        Block {
+          BlockType               Reference
+          Name                    "LPBRK1"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [185, 395, 195, 405]
+          SourceBlock             "execlib/LPBRK"
+          ShowName                off
+          SourceType              "LPBRK"
+          #GUID                   ed6a847b-2c7f-4594-80f8-a6319af4a343
+        }
+        Block {
+          BlockType               Reference
+          Name                    "LPBRK2"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [185, 265, 195, 275]
+          SourceBlock             "execlib/LPBRK"
+          ShowName                off
+          SourceType              "LPBRK"
+          #GUID                   00210715-7c25-4161-9a87-cacd87e8953a
+        }
+        Block {
+          BlockType               Reference
+          Name                    "LPBRK3"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [130, 255, 140, 265]
+          SourceBlock             "execlib/LPBRK"
+          ShowName                off
+          SourceType              "LPBRK"
+          #GUID                   c7c3d20d-78dc-4206-b0bc-0bbe30c89a31
+        }
+        Block {
+          BlockType               Reference
+          Name                    "LPBRK4"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [180, 305, 190, 315]
+          SourceBlock             "execlib/LPBRK"
+          ShowName                off
+          SourceType              "LPBRK"
+          #GUID                   4cb3a8df-480d-4498-a217-9b6bbe575741
+        }
+        Block {
+          BlockType               Reference
+          Name                    "LPBRK5"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [185, 345, 195, 355]
+          SourceBlock             "execlib/LPBRK"
+          ShowName                off
+          SourceType              "LPBRK"
+          #GUID                   f42f215d-300a-4d43-8f19-cc201e0d2810
+        }
+        Block {
+          BlockType               SubSystem
+          Name                    "Lower_equilibrium_position_control"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [560, 86, 715, 119]
+          BackgroundColor         [0.666667, 0.725490, 0.901961]
+          MinAlgLoopOccurrences   off
+          PropExecContextOutsideSubsystem off
+          RTWSystemCode           "Auto"
+          FunctionWithSeparateData off
+          Opaque                  off
+          RequestExecContextInheritance off
+          MaskHideContents        off
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          ShowPortLabels          on
+          #GUID                   d5d6cc7a-0ff0-4c61-a673-41934831d716
+          System {
+            Name                    "Lower_equilibrium_position_control"
+            Location                [6, 262, 536, 345]
+            Open                    off
+            ModelBrowserVisibility  off
+            ModelBrowserWidth       200
+            ScreenColor             "white"
+            PaperOrientation        "landscape"
+            PaperPositionMode       "auto"
+            PaperType               "A4"
+            PaperUnits              "centimeters"
+            TiledPaperMargins       [1.270000, 1.270000, 1.270000, 1.270000]
+            TiledPageScale          1
+            ShowPageBoundaries      off
+            ZoomFactor              100
+            #GUID                   d1c7e6e9-852b-4246-8b66-dd13d7d2d801
+            Block {
+              BlockType               Inport
+              Name                    "sp_alpha"
+              Position                [40, 13, 70, 27]
+              Port                    1
+              IconDisplay             "Port number"
+              #GUID                   fb2513a7-6342-48db-a99b-56e7a0276e64
+            }
+            Block {
+              BlockType               Inport
+              Name                    "alpha"
+              Position                [40, 43, 70, 57]
+              Port                    2
+              IconDisplay             "Port number"
+              #GUID                   c820e769-18fe-488a-90d8-179b79cf92df
+            }
+            Block {
+              BlockType               Reference
+              Name                    "GAIN_P_controller"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [325, 18, 350, 32]
+              SourceBlock             "mathlib/GAIN"
+              SourceType              "GAIN"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              k                       2
+              #GUID                   c1e819ce-0317-4859-bb0b-2cc6f1b0f947
+            }
+            Block {
+              BlockType               Reference
+              Name                    "SUB"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [240, 13, 265, 37]
+              SourceBlock             "mathlib/SUB"
+              SourceType              "SUB"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   cf23f7b6-4ac6-456d-ac7b-65f5079965b6
+            }
+            Block {
+              BlockType               Outport
+              Name                    "sp_ArmVelocity"
+              Position                [410, 18, 440, 32]
+              Port                    1
+              IconDisplay             "Port number"
+              #GUID                   9a66c3d1-1db0-42c4-84df-50ab46336ca3
+            }
+            Line {
+              SrcBlock                "GAIN_P_controller"
+              SrcPort                 1
+              DstBlock                "sp_ArmVelocity"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "SUB"
+              SrcPort                 1
+              DstBlock                "GAIN_P_controller"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "alpha"
+              SrcPort                 1
+              Points                  [150, 0]
+              DstBlock                "SUB"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "sp_alpha"
+              SrcPort                 1
+              DstBlock                "SUB"
+              DstPort                 1
+            }
+          }
+        }
+        Block {
+          BlockType               SubSystem
+          Name                    "Lower_equilibrium_stabilization_algorithm"
+          Ports                   [7, 2, 0, 0, 0]
+          Position                [560, 370, 715, 480]
+          BackgroundColor         [0.666667, 0.725490, 0.901961]
+          MinAlgLoopOccurrences   off
+          PropExecContextOutsideSubsystem off
+          RTWSystemCode           "Auto"
+          FunctionWithSeparateData off
+          Opaque                  off
+          RequestExecContextInheritance off
+          MaskHideContents        off
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          ShowPortLabels          on
+          #GUID                   11d38f2e-9d07-42f5-aa3a-fd88c1a05bae
+          System {
+            Name                    "Lower_equilibrium_stabilization_algorithm"
+            Location                [29, 82, 1013, 680]
+            Open                    off
+            ModelBrowserVisibility  off
+            ModelBrowserWidth       200
+            ScreenColor             "white"
+            PaperOrientation        "landscape"
+            PaperPositionMode       "auto"
+            PaperType               "A4"
+            PaperUnits              "centimeters"
+            TiledPaperMargins       [1.270000, 1.270000, 1.270000, 1.270000]
+            TiledPageScale          1
+            ShowPageBoundaries      off
+            ZoomFactor              100
+            #GUID                   f5bccaea-5586-4994-a8b1-424838f99916
+            Block {
+              BlockType               Inport
+              Name                    "Q10"
+              Position                [50, 48, 80, 62]
+              Port                    1
+              IconDisplay             "Port number"
+              #GUID                   19fd4977-02b3-4ac2-afe4-c4b8a24155d8
+            }
+            Block {
+              BlockType               Inport
+              Name                    "UPRIGHT"
+              Position                [50, 78, 80, 92]
+              Port                    2
+              IconDisplay             "Port number"
+              #GUID                   bc645de7-d66e-4ca5-b5c4-366bd3e0fdd4
+            }
+            Block {
+              BlockType               Inport
+              Name                    "alpha_vel"
+              Position                [60, 163, 90, 177]
+              Port                    3
+              IconDisplay             "Port number"
+              #GUID                   8323ec6d-a54e-4d1e-8b95-d3b9c7c12f30
+            }
+            Block {
+              BlockType               Inport
+              Name                    "alpha_pos"
+              Position                [60, 198, 90, 212]
+              Port                    4
+              IconDisplay             "Port number"
+              #GUID                   89fcad7a-5fa8-498f-8ecb-d8cad232bfa9
+            }
+            Block {
+              BlockType               Inport
+              Name                    "beta_down"
+              Position                [60, 233, 90, 247]
+              Port                    5
+              IconDisplay             "Port number"
+              OutDataType             "sfix(16)"
+              OutScaling              "2^0"
+              #GUID                   ddcb02a1-48b0-48bc-906b-2e5f193e6373
+            }
+            Block {
+              BlockType               Inport
+              Name                    "beta_vel"
+              Position                [60, 303, 90, 317]
+              Port                    6
+              IconDisplay             "Port number"
+              OutDataType             "sfix(16)"
+              OutScaling              "2^0"
+              #GUID                   ab30f691-fc4b-4296-8ee5-334c12260de4
+            }
+            Block {
+              BlockType               Inport
+              Name                    "beta_down_start"
+              Position                [60, 268, 90, 282]
+              Port                    7
+              IconDisplay             "Port number"
+              OutDataType             "sfix(16)"
+              OutScaling              "2^0"
+              #GUID                   40c2a8f7-1f9e-43a7-a8fa-05236f41dc08
+            }
+            Block {
+              BlockType               Reference
+              Name                    "ABS_"
+              Ports                   [1, 2, 0, 0, 0]
+              Position                [360, 233, 390, 257]
+              SourceBlock             "mathlib/ABS_"
+              SourceType              "ABS"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   df67301b-26fb-474e-b19b-a7e6e63e7722
+            }
+            Block {
+              BlockType               Reference
+              Name                    "ABS_1"
+              Ports                   [1, 2, 0, 0, 0]
+              Position                [320, 358, 350, 382]
+              SourceBlock             "mathlib/ABS_"
+              SourceType              "ABS"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   35f40197-92ab-4797-a15c-74b02e383778
+            }
+            Block {
+              BlockType               Reference
+              Name                    "ABS_2"
+              Ports                   [1, 2, 0, 0, 0]
+              Position                [320, 443, 350, 467]
+              SourceBlock             "mathlib/ABS_"
+              SourceType              "ABS"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   cf90b69e-92ab-451f-ad81-5fa7a6294713
+            }
+            Block {
+              BlockType               Reference
+              Name                    "ABS_3"
+              Ports                   [1, 2, 0, 0, 0]
+              Position                [320, 498, 350, 522]
+              SourceBlock             "mathlib/ABS_"
+              SourceType              "ABS"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   f0b37d9a-a7d1-4ada-a499-34d71815a359
+            }
+            Block {
+              BlockType               Reference
+              Name                    "AND_"
+              Ports                   [2, 2, 0, 0, 0]
+              Position                [130, 58, 165, 82]
+              SourceBlock             "logiclib/AND_"
+              SourceType              "AND"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   48fda943-f55b-4fef-9661-1456cd71df61
+            }
+            Block {
+              BlockType               Reference
+              Name                    "AND_1"
+              Ports                   [2, 2, 0, 0, 0]
+              Position                [710, 363, 745, 387]
+              SourceBlock             "logiclib/AND_"
+              SourceType              "AND"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   79c38c58-587f-4d3c-aa5d-96be52c62cbd
+            }
+            Block {
+              BlockType               Reference
+              Name                    "AND_6"
+              Ports                   [2, 2, 0, 0, 0]
+              Position                [630, 363, 665, 387]
+              SourceBlock             "logiclib/AND_"
+              SourceType              "AND"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   fd5bd8b0-5aae-41f5-96b8-0d32f52ad7e7
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [315, 38, 330, 52]
+              SourceBlock             "mathlib/CNR"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     0
+              #GUID                   0f311763-1699-436c-a094-ad87290952e9
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR5"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [300, 403, 405, 417]
+              SourceBlock             "mathlib/CNR"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     "0.087266462599716"
+              #GUID                   b992c3c6-3f74-419c-bcce-d921d283c9c2
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR60"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [355, 273, 455, 287]
+              SourceBlock             "mathlib/CNR"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     "0.5"
+              #GUID                   2399ab7a-bf81-4ebd-a00c-6882012eee5e
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR_2"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [285, 548, 405, 562]
+              SourceBlock             "mathlib/CNR"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     "0.0017453292519943"
+              #GUID                   9df94a58-65f3-41cd-8ee9-7572b86e835b
+            }
+            Block {
+              BlockType               Reference
+              Name                    "F_EAS_lower_ss_controller"
+              Ports                   [4, 1, 0, 0, 0]
+              Position                [305, 162, 330, 208]
+              SourceBlock             "mathlib/EAS"
+              NamePlacement           "alternate"
+              SourceType              "EAS"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              a                       "6.12354219E-001"
+              b                       "-4.25163230E-001"
+              c                       "-2.53804417E+000"
+              d                       "-3.30908089E-001"
+              y0                      0
+              #GUID                   9953491c-0583-4f6d-8942-99bb3beb090f
+            }
+            Block {
+              BlockType               Reference
+              Name                    "NOT_"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [555, 123, 580, 137]
+              SourceBlock             "logiclib/NOT_"
+              SourceType              "NOT"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   9922b138-919c-4f63-a62a-7ae84b1b9fb3
+            }
+            Block {
+              BlockType               Reference
+              Name                    "REL"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [475, 263, 500, 287]
+              SourceBlock             "mathlib/REL"
+              SourceType              "REL"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              irel                    "3: less than (<)"
+              #GUID                   e8e146a6-6b91-4142-aa5d-92be781e0cfe
+            }
+            Block {
+              BlockType               Reference
+              Name                    "REL1"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [435, 443, 460, 467]
+              SourceBlock             "mathlib/REL"
+              SourceType              "REL"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              irel                    "3: less than (<)"
+              #GUID                   372bff4d-6fa0-48ce-ae57-d66fd145b0e7
+            }
+            Block {
+              BlockType               Reference
+              Name                    "REL2"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [435, 358, 460, 382]
+              SourceBlock             "mathlib/REL"
+              SourceType              "REL"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              irel                    "3: less than (<)"
+              #GUID                   8d239489-2119-49d4-89e0-593728fae97a
+            }
+            Block {
+              BlockType               Reference
+              Name                    "REL4"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [435, 498, 460, 522]
+              SourceBlock             "mathlib/REL"
+              SourceType              "REL"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              irel                    "3: less than (<)"
+              #GUID                   084f2411-f4f4-4465-b3c8-5da1b571ff62
+            }
+            Block {
+              BlockType               Reference
+              Name                    "RS"
+              Ports                   [2, 2, 0, 0, 0]
+              Position                [645, 268, 680, 292]
+              SourceBlock             "logiclib/RS"
+              SourceType              "RS"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   67a0d33e-0ceb-45c6-b79d-d587107452d1
+            }
+            Block {
+              BlockType               Reference
+              Name                    "SGI_disturbance4falling"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [205, 58, 245, 82]
+              SourceBlock             "genlib/SGI"
+              NamePlacement           "alternate"
+              SourceType              "SGI"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              isig                    "4: RANDOM"
+              amp                     1
+              freq                    1
+              phase                   0
+              ifrunit                 "1: Hz"
+              iphunit                 "1: degree"
+              #GUID                   a810beb9-f5d1-4439-bd78-742efc0242ae
+            }
+            Block {
+              BlockType               Reference
+              Name                    "SOPDT"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [280, 63, 305, 77]
+              SourceBlock             "reglib/SOPDT"
+              SourceType              "SOPDT"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              itf                     "2: Real poles"
+              k0                      1
+              tau                     0
+              tau1                    "0.1"
+              tau2                    "0.2"
+              om                      1
+              xi                      1
+              pb0                     1
+              pb1                     1
+              pa0                     1
+              pa1                     1
+              del                     0
+              #GUID                   476ff3d3-7348-44b7-8ac2-b3bfe0abc6af
+            }
+            Block {
+              BlockType               Reference
+              Name                    "SSW"
+              Ports                   [3, 1, 0, 0, 0]
+              Position                [390, 53, 420, 87]
+              SourceBlock             "reglib/SSW"
+              SourceType              "SSW"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   6055624e-6bbf-45fb-bc87-38e1869fe17e
+            }
+            Block {
+              BlockType               Reference
+              Name                    "SSW1"
+              Ports                   [3, 1, 0, 0, 0]
+              Position                [710, 63, 740, 97]
+              SourceBlock             "reglib/SSW"
+              SourceType              "SSW"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   320c08a3-9714-413a-a858-f8a12760c0d1
+            }
+            Block {
+              BlockType               Reference
+              Name                    "SUB"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [195, 233, 220, 257]
+              SourceBlock             "mathlib/SUB"
+              SourceType              "SUB"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   72733e2d-b955-485a-ad5e-f74af26a928d
+            }
+            Block {
+              BlockType               Outport
+              Name                    "sp_ArmVelocity"
+              Position                [790, 73, 820, 87]
+              Port                    1
+              IconDisplay             "Port number"
+              #GUID                   ae2b9899-9883-4f99-8084-4999bae488e8
+            }
+            Block {
+              BlockType               Outport
+              Name                    "HANGING"
+              Position                [910, 363, 940, 377]
+              Port                    2
+              IconDisplay             "Port number"
+              #GUID                   a98100c4-3180-456e-b0e8-41348620aace
+            }
+            Line {
+              SrcBlock                "ABS_"
+              SrcPort                 1
+              Points                  [65, 0]
+              DstBlock                "REL"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "ABS_1"
+              SrcPort                 1
+              DstBlock                "REL2"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "ABS_2"
+              SrcPort                 1
+              DstBlock                "REL1"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "ABS_3"
+              SrcPort                 1
+              DstBlock                "REL4"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "AND_"
+              SrcPort                 1
+              Points                  [10, 0]
+              Branch {
+                DstBlock                "SGI_disturbance4falling"
+                DstPort                 1
+              }
+              Branch {
+                Points                  [0, 40; 195, 0]
+                DstBlock                "SSW"
+                DstPort                 3
+              }
+            }
+            Line {
+              Name                    "pendulum is hanging steady"
+              SrcBlock                "AND_1"
+              SrcPort                 1
+              Labels                  [1, 1]
+              DstBlock                "HANGING"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "AND_6"
+              SrcPort                 1
+              DstBlock                "AND_1"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "CNR"
+              SrcPort                 1
+              Points                  [10, 0; 0, 15]
+              DstBlock                "SSW"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "CNR5"
+              SrcPort                 1
+              Points                  [10, 0]
+              Branch {
+                DstBlock                "REL1"
+                DstPort                 2
+              }
+              Branch {
+                DstBlock                "REL2"
+                DstPort                 2
+              }
+            }
+            Line {
+              SrcBlock                "CNR60"
+              SrcPort                 1
+              DstBlock                "REL"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "CNR_2"
+              SrcPort                 1
+              Points                  [10, 0]
+              DstBlock                "REL4"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "F_EAS_lower_ss_controller"
+              SrcPort                 1
+              Points                  [100, 0; 0, -105]
+              DstBlock                "SSW1"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "NOT_"
+              SrcPort                 1
+              Points                  [35, 0; 0, 155]
+              DstBlock                "RS"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "Q10"
+              SrcPort                 1
+              Points                  [5, 0; 0, 10; 10, 0]
+              Branch {
+                DstBlock                "AND_"
+                DstPort                 1
+              }
+              Branch {
+                Points                  [0, 65]
+                DstBlock                "NOT_"
+                DstPort                 1
+              }
+            }
+            Line {
+              Name                    "pendulum is close \nto the lower positi"
+"on"
+              SrcBlock                "REL"
+              SrcPort                 1
+              Labels                  [1, 1]
+              DstBlock                "RS"
+              DstPort                 1
+            }
+            Line {
+              Name                    "arm is close to the initial position"
+              SrcBlock                "REL1"
+              SrcPort                 1
+              Labels                  [1, 1]
+              Points                  [150, 0]
+              DstBlock                "AND_6"
+              DstPort                 2
+            }
+            Line {
+              Name                    "pendulum is in\nthe lower position"
+              SrcBlock                "REL2"
+              SrcPort                 1
+              Labels                  [1, 1]
+              DstBlock                "AND_6"
+              DstPort                 1
+            }
+            Line {
+              Name                    "pendulum velocity\nis small"
+              SrcBlock                "REL4"
+              SrcPort                 1
+              Labels                  [1, 1]
+              Points                  [230, 0]
+              DstBlock                "AND_1"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "RS"
+              SrcPort                 1
+              Points                  [10, 0]
+              DstBlock                "SSW1"
+              DstPort                 3
+            }
+            Line {
+              SrcBlock                "SGI_disturbance4falling"
+              SrcPort                 1
+              DstBlock                "SOPDT"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "SOPDT"
+              SrcPort                 1
+              DstBlock                "SSW"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "SSW"
+              SrcPort                 1
+              DstBlock                "SSW1"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "SSW1"
+              SrcPort                 1
+              DstBlock                "sp_ArmVelocity"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "SUB"
+              SrcPort                 1
+              Points                  [20, 0]
+              Branch {
+                DstBlock                "ABS_"
+                DstPort                 1
+              }
+              Branch {
+                Points                  [0, 125]
+                DstBlock                "ABS_1"
+                DstPort                 1
+              }
+              Branch {
+                Points                  [0, -55]
+                DstBlock                "F_EAS_lower_ss_controller"
+                DstPort                 3
+              }
+            }
+            Line {
+              SrcBlock                "UPRIGHT"
+              SrcPort                 1
+              Points                  [5, 0; 0, -10]
+              DstBlock                "AND_"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "alpha_pos"
+              SrcPort                 1
+              Points                  [20, 0]
+              Branch {
+                Points                  [0, 250]
+                DstBlock                "ABS_2"
+                DstPort                 1
+              }
+              Branch {
+                Points                  [0, -25]
+                DstBlock                "F_EAS_lower_ss_controller"
+                DstPort                 2
+              }
+            }
+            Line {
+              SrcBlock                "alpha_vel"
+              SrcPort                 1
+              DstBlock                "F_EAS_lower_ss_controller"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "beta_down"
+              SrcPort                 1
+              DstBlock                "SUB"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "beta_down_start"
+              SrcPort                 1
+              Points                  [40, 0; 0, -25]
+              DstBlock                "SUB"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "beta_vel"
+              SrcPort                 1
+              Points                  [45, 0]
+              Branch {
+                Points                  [0, 200]
+                DstBlock                "ABS_3"
+                DstPort                 1
+              }
+              Branch {
+                Points                  [150, 0]
+                DstBlock                "F_EAS_lower_ss_controller"
+                DstPort                 4
+              }
+            }
+          }
+        }
+        Block {
+          BlockType               Reference
+          Name                    "NOT_1"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [145, 343, 170, 357]
+          SourceBlock             "logiclib/NOT_"
+          SourceType              "NOT"
+          ShowPortLabels          "FromPortIcon"
+          SystemSampleTime        -1
+          FunctionWithSeparateData off
+          RTWMemSecFuncInitTerm   "Inherit from model"
+          RTWMemSecFuncExecute    "Inherit from model"
+          RTWMemSecDataConstants  "Inherit from model"
+          RTWMemSecDataInternal   "Inherit from model"
+          RTWMemSecDataParameters "Inherit from model"
+          #GUID                   0a5b6071-fc42-4b35-9e11-d22917915990
+        }
+        Block {
+          BlockType               Reference
+          Name                    "OR_"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [515, 508, 550, 532]
+          SourceBlock             "logiclib/OR_"
+          SourceType              "OR"
+          ShowPortLabels          "FromPortIcon"
+          SystemSampleTime        -1
+          FunctionWithSeparateData off
+          RTWMemSecFuncInitTerm   "Inherit from model"
+          RTWMemSecFuncExecute    "Inherit from model"
+          RTWMemSecDataConstants  "Inherit from model"
+          RTWMemSecDataInternal   "Inherit from model"
+          RTWMemSecDataParameters "Inherit from model"
+          #GUID                   ba478eea-9d1c-4abc-9476-14df00b7985f
+        }
+        Block {
+          BlockType               Reference
+          Name                    "OR_1"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [515, 558, 550, 582]
+          SourceBlock             "logiclib/OR_"
+          SourceType              "OR"
+          ShowPortLabels          "FromPortIcon"
+          SystemSampleTime        -1
+          FunctionWithSeparateData off
+          RTWMemSecFuncInitTerm   "Inherit from model"
+          RTWMemSecFuncExecute    "Inherit from model"
+          RTWMemSecDataConstants  "Inherit from model"
+          RTWMemSecDataInternal   "Inherit from model"
+          RTWMemSecDataParameters "Inherit from model"
+          #GUID                   44d81d19-2465-43f1-bb37-0a8eecfdbcab
+        }
+        Block {
+          BlockType               Reference
+          Name                    "OR_2"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [585, 528, 620, 552]
+          SourceBlock             "logiclib/OR_"
+          SourceType              "OR"
+          ShowPortLabels          "FromPortIcon"
+          SystemSampleTime        -1
+          FunctionWithSeparateData off
+          RTWMemSecFuncInitTerm   "Inherit from model"
+          RTWMemSecFuncExecute    "Inherit from model"
+          RTWMemSecDataConstants  "Inherit from model"
+          RTWMemSecDataInternal   "Inherit from model"
+          RTWMemSecDataParameters "Inherit from model"
+          #GUID                   0bbd38f1-b3b7-4b4e-98c7-328cc6294bc4
+        }
+        Block {
+          BlockType               Reference
+          Name                    "OR_3"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [515, 618, 550, 642]
+          SourceBlock             "logiclib/OR_"
+          SourceType              "OR"
+          ShowPortLabels          "FromPortIcon"
+          SystemSampleTime        -1
+          FunctionWithSeparateData off
+          RTWMemSecFuncInitTerm   "Inherit from model"
+          RTWMemSecFuncExecute    "Inherit from model"
+          RTWMemSecDataConstants  "Inherit from model"
+          RTWMemSecDataInternal   "Inherit from model"
+          RTWMemSecDataParameters "Inherit from model"
+          #GUID                   a99b6465-fcb7-4fda-baa3-d9023e041166
+        }
+        Block {
+          BlockType               Reference
+          Name                    "OR_4"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [130, 268, 165, 292]
+          SourceBlock             "logiclib/OR_"
+          SourceType              "OR"
+          ShowPortLabels          "FromPortIcon"
+          SystemSampleTime        -1
+          FunctionWithSeparateData off
+          RTWMemSecFuncInitTerm   "Inherit from model"
+          RTWMemSecFuncExecute    "Inherit from model"
+          RTWMemSecDataConstants  "Inherit from model"
+          RTWMemSecDataInternal   "Inherit from model"
+          RTWMemSecDataParameters "Inherit from model"
+          #GUID                   b20afbbe-7c7d-4325-be34-ad4721341514
+        }
+        Block {
+          BlockType               Reference
+          Name                    "SELU"
+          Ports                   [7, 5, 0, 0, 0]
+          Position                [785, 557, 825, 633]
+          SourceBlock             "reglib/SELU"
+          BackgroundColor         [0.666667, 0.901961, 0.901961]
+          SourceType              "SELU"
+          ShowPortLabels          "FromPortIcon"
+          SystemSampleTime        -1
+          FunctionWithSeparateData off
+          RTWMemSecFuncInitTerm   "Inherit from model"
+          RTWMemSecFuncExecute    "Inherit from model"
+          RTWMemSecDataConstants  "Inherit from model"
+          RTWMemSecDataInternal   "Inherit from model"
+          RTWMemSecDataParameters "Inherit from model"
+          BINF                    on
+          #GUID                   e29254fe-3c26-45bb-b1e3-fa3c8dbfc710
+        }
+        Block {
+          BlockType               Reference
+          Name                    "SLEEP"
+          Ports                   [0, 0, 0, 0, 0]
+          Position                [35, 578, 65, 592]
+          SourceBlock             "execlib/SLEEP"
+          BackgroundColor         [0.666667, 0.725490, 0.901961]
+          SourceType              "SLEEP"
+          ShowPortLabels          "FromPortIcon"
+          SystemSampleTime        -1
+          FunctionWithSeparateData off
+          RTWMemSecFuncInitTerm   "Inherit from model"
+          RTWMemSecFuncExecute    "Inherit from model"
+          RTWMemSecDataConstants  "Inherit from model"
+          RTWMemSecDataInternal   "Inherit from model"
+          RTWMemSecDataParameters "Inherit from model"
+          ts                      "0.01"
+          #GUID                   11b1fde7-5fcb-4b18-88db-a0f1b2bb3fcf
+        }
+        Block {
+          BlockType               Reference
+          Name                    "START"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [95, 228, 110, 242]
+          SourceBlock             "genlib/MP"
+          NamePlacement           "alternate"
+          SourceType              "MP"
+          ShowPortLabels          "FromPortIcon"
+          SystemSampleTime        -1
+          FunctionWithSeparateData off
+          RTWMemSecFuncInitTerm   "Inherit from model"
+          RTWMemSecFuncExecute    "Inherit from model"
+          RTWMemSecDataConstants  "Inherit from model"
+          RTWMemSecDataInternal   "Inherit from model"
+          RTWMemSecDataParameters "Inherit from model"
+          pwidth                  "0.01"
+          BSTATE                  off
+          RPTF                    off
+          #GUID                   99ad7cd2-ca6e-42d8-9bcc-c593fac80863
+        }
+        Block {
+          BlockType               Reference
+          Name                    "STOP"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [55, 203, 70, 217]
+          SourceBlock             "genlib/MP"
+          NamePlacement           "alternate"
+          SourceType              "MP"
+          ShowPortLabels          "FromPortIcon"
+          SystemSampleTime        -1
+          FunctionWithSeparateData off
+          RTWMemSecFuncInitTerm   "Inherit from model"
+          RTWMemSecFuncExecute    "Inherit from model"
+          RTWMemSecDataConstants  "Inherit from model"
+          RTWMemSecDataInternal   "Inherit from model"
+          RTWMemSecDataParameters "Inherit from model"
+          pwidth                  "0.01"
+          BSTATE                  off
+          RPTF                    off
+          #GUID                   1b2e4722-a56c-4162-b15b-2901cc2fd457
+        }
+        Block {
+          BlockType               Reference
+          Name                    "SUB_beta4visualization"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [210, 463, 235, 487]
+          SourceBlock             "mathlib/SUB"
+          SourceType              "SUB"
+          ShowPortLabels          "FromPortIcon"
+          SystemSampleTime        -1
+          FunctionWithSeparateData off
+          RTWMemSecFuncInitTerm   "Inherit from model"
+          RTWMemSecFuncExecute    "Inherit from model"
+          RTWMemSecDataConstants  "Inherit from model"
+          RTWMemSecDataInternal   "Inherit from model"
+          RTWMemSecDataParameters "Inherit from model"
+          #GUID                   8716e962-6baf-447d-8e59-fd43ca99262d
+        }
+        Block {
+          BlockType               Scope
+          Name                    "Scope"
+          Position                [285, 519, 315, 551]
+          Floating                off
+          Location                [194, 708, 518, 947]
+          Open                    off
+          NumInputPorts           1
+          TimeRange               60
+          YMin                    -4
+          YMax                    2
+          DataFormat              "StructureWithTime"
+          LimitDataPoints         off
+          SampleTime              0
+          #GUID                   7c8454a8-ca00-4c79-9ca4-10d2c940d166
+        }
+        Block {
+          BlockType               Scope
+          Name                    "Scope1"
+          Position                [285, 569, 315, 601]
+          Floating                off
+          Location                [188, 390, 512, 629]
+          Open                    off
+          NumInputPorts           1
+          ZoomMode                "yonly"
+          TimeRange               60
+          YMin                    -4
+          YMax                    4
+          SaveName                "ScopeData1"
+          DataFormat              "StructureWithTime"
+          LimitDataPoints         off
+          SampleTime              0
+          #GUID                   31631460-143f-4cd5-a1c5-61d0972b902f
+        }
+        Block {
+          BlockType               Scope
+          Name                    "Scope2"
+          Position                [285, 619, 315, 651]
+          Floating                off
+          Location                [188, 390, 512, 629]
+          Open                    off
+          NumInputPorts           1
+          ZoomMode                "yonly"
+          YMin                    "2.97087"
+          YMax                    "2.97104"
+          SaveName                "ScopeData2"
+          DataFormat              "StructureWithTime"
+          LimitDataPoints         off
+          SampleTime              0
+          #GUID                   41f2572b-c383-45e8-8738-79a47d905cce
+        }
+        Block {
+          BlockType               Scope
+          Name                    "Scope3"
+          Position                [285, 459, 315, 491]
+          Floating                off
+          Location                [194, 708, 518, 947]
+          Open                    off
+          NumInputPorts           1
+          YMin                    0
+          YMax                    "3.25"
+          SaveName                "ScopeData4"
+          DataFormat              "StructureWithTime"
+          LimitDataPoints         off
+          SampleTime              0
+          #GUID                   f7049ea9-fe7f-4c84-bed9-edcbce20ce4e
+        }
+        Block {
+          BlockType               SubSystem
+          Name                    "Signal_processing"
+          Ports                   [3, 5, 0, 0, 0]
+          Position                [170, 13, 310, 137]
+          BackgroundColor         [0.666667, 0.725490, 0.901961]
+          MinAlgLoopOccurrences   off
+          PropExecContextOutsideSubsystem off
+          RTWSystemCode           "Auto"
+          FunctionWithSeparateData off
+          Opaque                  off
+          RequestExecContextInheritance off
+          MaskHideContents        off
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          ShowPortLabels          on
+          #GUID                   e571280b-fbfa-421a-b05a-eb1376aae726
+          System {
+            Name                    "Signal_processing"
+            Location                [310, 196, 1526, 587]
+            Open                    off
+            ModelBrowserVisibility  off
+            ModelBrowserWidth       200
+            ScreenColor             "white"
+            PaperOrientation        "landscape"
+            PaperPositionMode       "auto"
+            PaperType               "A4"
+            PaperUnits              "centimeters"
+            TiledPaperMargins       [1.270000, 1.270000, 1.270000, 1.270000]
+            TiledPageScale          1
+            ShowPageBoundaries      off
+            ZoomFactor              100
+            #GUID                   6b952c5c-1417-4da9-91d5-c866afa711e7
+            Block {
+              BlockType               Inport
+              Name                    "beta_pos_sensor"
+              Position                [30, 33, 60, 47]
+              Port                    1
+              IconDisplay             "Port number"
+              #GUID                   7f45f3d6-e060-45a8-95db-e1411de3df80
+            }
+            Block {
+              BlockType               Inport
+              Name                    "alpha_pos_motor"
+              Position                [40, 133, 70, 147]
+              Port                    2
+              IconDisplay             "Port number"
+              #GUID                   a748b0de-dced-43a8-ba5a-101cc292cbcb
+            }
+            Block {
+              BlockType               Inport
+              Name                    "alpha_vel_motor"
+              Position                [40, 203, 70, 217]
+              Port                    3
+              IconDisplay             "Port number"
+              #GUID                   d983a2af-2eec-4b35-8a3e-4c27f20d2cb7
+            }
+            Block {
+              BlockType               Reference
+              Name                    "ABS_"
+              Ports                   [1, 2, 0, 0, 0]
+              Position                [825, 93, 855, 117]
+              SourceBlock             "mathlib/ABS_"
+              SourceType              "ABS"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   0140c07c-2c5b-4257-a5f5-088dd06e5c11
+            }
+            Block {
+              BlockType               Reference
+              Name                    "ADD2"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [425, 33, 450, 57]
+              SourceBlock             "mathlib/ADD"
+              SourceType              "ADD"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   506f7417-add3-44a2-90c6-9dd3ded4bb17
+            }
+            Block {
+              BlockType               Reference
+              Name                    "ADD3"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [425, 78, 450, 102]
+              SourceBlock             "mathlib/ADD"
+              SourceType              "ADD"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   8b2b06a7-078b-4fa2-bdd9-6c277176cc53
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR1"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [565, 114, 670, 126]
+              SourceBlock             "mathlib/CNR"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     "3.14159265358979"
+              #GUID                   0a10e75e-3650-4025-9166-e61629165813
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR2"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [275, 87, 395, 103]
+              SourceBlock             "mathlib/CNR"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     "4.71238898038469"
+              #GUID                   319daf06-fa7b-4531-8a7b-4f74c4e321e2
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR3"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [275, 42, 395, 58]
+              SourceBlock             "mathlib/CNR"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     "7.853981633974483"
+              #GUID                   017616b1-b008-4581-9161-022f0eaf2a4c
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR4"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [375, 134, 480, 146]
+              SourceBlock             "mathlib/CNR"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     "6.283185307179586"
+              #GUID                   2e9725de-b619-4f78-aeb8-b134b81447ae
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR90"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [880, 104, 990, 116]
+              SourceBlock             "mathlib/CNR"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     "1.570796326794897"
+              #GUID                   c1201568-21a1-4945-b01a-0a1c8582b5e7
+            }
+            Block {
+              BlockType               Reference
+              Name                    "FNXY_mod"
+              Ports                   [2, 2, 0, 0, 0]
+              Position                [515, 38, 540, 62]
+              SourceBlock             "mathlib/FNXY"
+              SourceType              "FNXY"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ifn                     "2: fmod"
+              yerr                    "0.0"
+              #GUID                   49ebf26c-29a1-4bb9-b7c8-a7c8063681e3
+            }
+            Block {
+              BlockType               Reference
+              Name                    "FNXY_mod1"
+              Ports                   [2, 2, 0, 0, 0]
+              Position                [515, 83, 540, 107]
+              SourceBlock             "mathlib/FNXY"
+              SourceType              "FNXY"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ifn                     "2: fmod"
+              yerr                    "0.0"
+              #GUID                   13f5590d-895a-4059-b98d-f193fab05516
+            }
+            Block {
+              BlockType               Reference
+              Name                    "GAIN_beta2rad"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [190, 35, 220, 45]
+              SourceBlock             "mathlib/GAIN"
+              SourceType              "GAIN"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              k                       "0.0175"
+              #GUID                   71430011-a8a2-4f87-b9eb-74309e7425ff
+            }
+            Block {
+              BlockType               Reference
+              Name                    "LC"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [910, 18, 935, 32]
+              SourceBlock             "reglib/LC"
+              SourceType              "LC"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              td                      1
+              nd                      30
+              ISSF                    off
+              #GUID                   8d61ee93-c057-433f-a467-b6326a3eeb14
+            }
+            Block {
+              BlockType               Reference
+              Name                    "LC1"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [910, 68, 935, 82]
+              SourceBlock             "reglib/LC"
+              SourceType              "LC"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              td                      1
+              nd                      30
+              ISSF                    off
+              #GUID                   b69da843-6426-4df4-8b15-e8bf8c6d8c68
+            }
+            Block {
+              BlockType               Reference
+              Name                    "LIN_beta"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [115, 35, 145, 45]
+              SourceBlock             "mathlib/LIN"
+              SourceType              "LIN"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              u1                      6553
+              y1                      5
+              u2                      32767
+              y2                      355
+              #GUID                   6ac8af82-9551-497e-ba28-78e2f4c0bf4e
+            }
+            Block {
+              BlockType               Reference
+              Name                    "REL4"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [1010, 93, 1035, 117]
+              SourceBlock             "mathlib/REL"
+              SourceType              "REL"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              irel                    "3: less than (<)"
+              #GUID                   3ed4e05b-2a9f-4a35-8874-7a86202e7a88
+            }
+            Block {
+              BlockType               Reference
+              Name                    "SSW1"
+              Ports                   [3, 1, 0, 0, 0]
+              Position                [1055, 48, 1085, 82]
+              SourceBlock             "reglib/SSW"
+              SourceType              "SSW"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   2371d3df-46a8-497d-8267-5da7cbc55e7f
+            }
+            Block {
+              BlockType               Reference
+              Name                    "SUB1"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [715, 13, 740, 37]
+              SourceBlock             "mathlib/SUB"
+              SourceType              "SUB"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   b9ba1fe0-cb1e-4e03-9c47-49b32f083a8a
+            }
+            Block {
+              BlockType               Reference
+              Name                    "SUB2"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [715, 63, 740, 87]
+              SourceBlock             "mathlib/SUB"
+              SourceType              "SUB"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   3726036c-8308-461c-9551-ffe0cf5f4ad2
+            }
+            Block {
+              BlockType               Outport
+              Name                    "alpha"
+              Position                [145, 133, 175, 147]
+              Port                    1
+              IconDisplay             "Port number"
+              #GUID                   94d39928-5bed-4bc0-b518-b7d4f20a7c85
+            }
+            Block {
+              BlockType               Outport
+              Name                    "alpha_vel"
+              Position                [145, 203, 175, 217]
+              Port                    2
+              IconDisplay             "Port number"
+              #GUID                   2a00ac72-c2f4-4b29-9e26-9f32397f210c
+            }
+            Block {
+              BlockType               Outport
+              Name                    "beta_up"
+              Position                [795, 38, 825, 52]
+              Port                    3
+              IconDisplay             "Port number"
+              #GUID                   cfec3dbf-22cc-473e-bc9d-a520e1bfb718
+            }
+            Block {
+              BlockType               Outport
+              Name                    "beta_down"
+              Position                [800, 143, 830, 157]
+              Port                    4
+              IconDisplay             "Port number"
+              #GUID                   86922024-62e9-4f24-a07e-1a1e3ec691ef
+            }
+            Block {
+              BlockType               Outport
+              Name                    "beta_vel"
+              Position                [1145, 58, 1175, 72]
+              Port                    5
+              IconDisplay             "Port number"
+              #GUID                   f3b4c23c-eec0-43d2-a046-2f0f5f4b76d8
+            }
+            Line {
+              SrcBlock                "ABS_"
+              SrcPort                 1
+              DstBlock                "REL4"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "ADD2"
+              SrcPort                 1
+              DstBlock                "FNXY_mod"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "ADD3"
+              SrcPort                 1
+              DstBlock                "FNXY_mod1"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "CNR1"
+              SrcPort                 1
+              Points                  [10, 0; 0, -40]
+              Branch {
+                Points                  [0, -50]
+                DstBlock                "SUB1"
+                DstPort                 2
+              }
+              Branch {
+                DstBlock                "SUB2"
+                DstPort                 2
+              }
+            }
+            Line {
+              SrcBlock                "CNR2"
+              SrcPort                 1
+              DstBlock                "ADD3"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "CNR3"
+              SrcPort                 1
+              DstBlock                "ADD2"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "CNR4"
+              SrcPort                 1
+              Points                  [5, 0; 0, -40]
+              Branch {
+                Points                  [0, -45]
+                DstBlock                "FNXY_mod"
+                DstPort                 2
+              }
+              Branch {
+                DstBlock                "FNXY_mod1"
+                DstPort                 2
+              }
+            }
+            Line {
+              SrcBlock                "CNR90"
+              SrcPort                 1
+              DstBlock                "REL4"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "FNXY_mod"
+              SrcPort                 1
+              Points                  [110, 0; 0, -25]
+              DstBlock                "SUB1"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "FNXY_mod1"
+              SrcPort                 1
+              Points                  [85, 0; 0, -20]
+              DstBlock                "SUB2"
+              DstPort                 1
+            }
+            Line {
+              Name                    "position rad"
+              SrcBlock                "GAIN_beta2rad"
+              SrcPort                 1
+              Labels                  [0, 0]
+              Points                  [30, 0]
+              Branch {
+                DstBlock                "ADD2"
+                DstPort                 1
+              }
+              Branch {
+                Points                  [0, 45]
+                DstBlock                "ADD3"
+                DstPort                 1
+              }
+            }
+            Line {
+              SrcBlock                "LC"
+              SrcPort                 1
+              Points                  [50, 0; 0, 30]
+              DstBlock                "SSW1"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "LC1"
+              SrcPort                 1
+              Points                  [50, 0; 0, -10]
+              DstBlock                "SSW1"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "LIN_beta"
+              SrcPort                 1
+              DstBlock                "GAIN_beta2rad"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "REL4"
+              SrcPort                 1
+              DstBlock                "SSW1"
+              DstPort                 3
+            }
+            Line {
+              SrcBlock                "SSW1"
+              SrcPort                 1
+              DstBlock                "beta_vel"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "SUB1"
+              SrcPort                 1
+              Points                  [35, 0]
+              Branch {
+                DstBlock                "LC"
+                DstPort                 1
+              }
+              Branch {
+                DstBlock                "beta_up"
+                DstPort                 1
+              }
+            }
+            Line {
+              SrcBlock                "SUB2"
+              SrcPort                 1
+              Points                  [35, 0]
+              Branch {
+                Points                  [0, 30]
+                Branch {
+                  DstBlock                "ABS_"
+                  DstPort                 1
+                }
+                Branch {
+                  Points                  [0, 45]
+                  DstBlock                "beta_down"
+                  DstPort                 1
+                }
+              }
+              Branch {
+                DstBlock                "LC1"
+                DstPort                 1
+              }
+            }
+            Line {
+              SrcBlock                "alpha_pos_motor"
+              SrcPort                 1
+              Labels                  [0, 0]
+              DstBlock                "alpha"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "alpha_vel_motor"
+              SrcPort                 1
+              DstBlock                "alpha_vel"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "beta_pos_sensor"
+              SrcPort                 1
+              DstBlock                "LIN_beta"
+              DstPort                 1
+            }
+          }
+        }
+        Block {
+          BlockType               SubSystem
+          Name                    "Swing_up_algorithm"
+          Ports                   [3, 2, 0, 0, 0]
+          Position                [560, 152, 715, 198]
+          BackgroundColor         [0.666667, 0.725490, 0.901961]
+          MinAlgLoopOccurrences   off
+          PropExecContextOutsideSubsystem off
+          RTWSystemCode           "Auto"
+          FunctionWithSeparateData off
+          Opaque                  off
+          RequestExecContextInheritance off
+          MaskHideContents        off
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          ShowPortLabels          on
+          #GUID                   e752a771-6d8e-42e8-af04-d35197408f1f
+          System {
+            Name                    "Swing_up_algorithm"
+            Location                [250, 354, 615, 525]
+            Open                    off
+            ModelBrowserVisibility  off
+            ModelBrowserWidth       200
+            ScreenColor             "white"
+            PaperOrientation        "landscape"
+            PaperPositionMode       "auto"
+            PaperType               "A4"
+            PaperUnits              "centimeters"
+            TiledPaperMargins       [1.270000, 1.270000, 1.270000, 1.270000]
+            TiledPageScale          1
+            ShowPageBoundaries      off
+            ZoomFactor              100
+            #GUID                   ad73a775-7a22-483f-a165-2759382a2ac4
+            Block {
+              BlockType               Inport
+              Name                    "Q0"
+              Position                [30, 98, 60, 112]
+              Port                    1
+              IconDisplay             "Port number"
+              #GUID                   eb036840-8ada-490e-a14b-439957b16495
+            }
+            Block {
+              BlockType               Inport
+              Name                    "Q1"
+              Position                [30, 18, 60, 32]
+              Port                    2
+              IconDisplay             "Port number"
+              #GUID                   3708a474-b109-47f2-9ee6-dc81e1d41501
+            }
+            Block {
+              BlockType               Inport
+              Name                    "beta_down"
+              Position                [30, 68, 60, 82]
+              Port                    3
+              IconDisplay             "Port number"
+              OutDataType             "sfix(16)"
+              OutScaling              "2^0"
+              #GUID                   ed0195f3-2d69-478e-804c-dec4abee59ee
+            }
+            Block {
+              BlockType               Reference
+              Name                    "ANLS_swingup"
+              Ports                   [1, 2, 0, 0, 0]
+              Position                [150, 13, 190, 37]
+              SourceBlock             "genlib/ANLS"
+              SourceType              "ANLS"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              y0                      -10
+              t1                      "0.21"
+              y1                      -10
+              t2                      "0.21"
+              y2                      10
+              t3                      1
+              y3                      10
+              t4                      1
+              y4                      0
+              RPT                     off
+              #GUID                   64fdb5c9-621e-4d05-82dd-086e488ec4fd
+            }
+            Block {
+              BlockType               Reference
+              Name                    "AVG"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [125, 68, 150, 82]
+              SourceBlock             "anallib/AVG"
+              SourceType              "AVG"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              n                       100
+              #GUID                   0f6bf7e9-b5c5-4291-bfee-5bf227e4624d
+            }
+            Block {
+              BlockType               Reference
+              Name                    "NOT_2"
+              Ports                   [1, 1, 0, 0, 0]
+              Position                [125, 96, 150, 114]
+              SourceBlock             "logiclib/NOT_"
+              SourceType              "NOT"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   0f076296-779b-4a84-bcc8-c2ec27d90bc2
+            }
+            Block {
+              BlockType               Reference
+              Name                    "SHLD"
+              Ports                   [3, 1, 0, 0, 0]
+              Position                [175, 68, 215, 102]
+              SourceBlock             "anallib/SHLD"
+              SourceType              "SHLD"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              y0                      0
+              #GUID                   130fccdd-aeed-48f1-9717-3cbf59726146
+            }
+            Block {
+              BlockType               Outport
+              Name                    "sp_ArmVelocity"
+              Position                [275, 13, 305, 27]
+              Port                    1
+              IconDisplay             "Port number"
+              #GUID                   86fbd9f0-84ae-462f-afe4-fd01f9a959e8
+            }
+            Block {
+              BlockType               Outport
+              Name                    "beta_down_start"
+              Position                [275, 78, 305, 92]
+              Port                    2
+              IconDisplay             "Port number"
+              #GUID                   1744a3f0-07aa-4fb4-8088-9445c6570666
+            }
+            Line {
+              SrcBlock                "ANLS_swingup"
+              SrcPort                 1
+              DstBlock                "sp_ArmVelocity"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "AVG"
+              SrcPort                 1
+              DstBlock                "SHLD"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "NOT_2"
+              SrcPort                 1
+              Points                  [0, -20]
+              DstBlock                "SHLD"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "Q0"
+              SrcPort                 1
+              DstBlock                "NOT_2"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "Q1"
+              SrcPort                 1
+              DstBlock                "ANLS_swingup"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "SHLD"
+              SrcPort                 1
+              DstBlock                "beta_down_start"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "beta_down"
+              SrcPort                 1
+              DstBlock                "AVG"
+              DstPort                 1
+            }
+          }
+        }
+        Block {
+          BlockType               SubSystem
+          Name                    "Upper_equilibrium_stabilization_algorithm"
+          Ports                   [8, 2, 0, 0, 0]
+          Position                [560, 220, 715, 345]
+          BackgroundColor         [0.666667, 0.725490, 0.901961]
+          MinAlgLoopOccurrences   off
+          PropExecContextOutsideSubsystem off
+          RTWSystemCode           "Auto"
+          FunctionWithSeparateData off
+          Opaque                  off
+          RequestExecContextInheritance off
+          MaskHideContents        off
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          ShowPortLabels          on
+          #GUID                   a3f21a3e-b9ee-40ea-a3ca-e14691d6d6a9
+          System {
+            Name                    "Upper_equilibrium_stabilization_algorithm"
+            Location                [105, 102, 1081, 734]
+            Open                    off
+            ModelBrowserVisibility  off
+            ModelBrowserWidth       200
+            ScreenColor             "white"
+            PaperOrientation        "landscape"
+            PaperPositionMode       "auto"
+            PaperType               "A4"
+            PaperUnits              "centimeters"
+            TiledPaperMargins       [1.270000, 1.270000, 1.270000, 1.270000]
+            TiledPageScale          1
+            ShowPageBoundaries      off
+            ZoomFactor              100
+            #GUID                   5c6f7889-f630-4573-a769-f32465f73b69
+            Block {
+              BlockType               Inport
+              Name                    "Q2"
+              Position                [55, 328, 85, 342]
+              Port                    1
+              IconDisplay             "Port number"
+              #GUID                   5d8ecb30-2d9c-471a-a2d0-099d769ef0db
+            }
+            Block {
+              BlockType               Inport
+              Name                    "Q3"
+              Position                [55, 103, 85, 117]
+              Port                    2
+              IconDisplay             "Port number"
+              #GUID                   8a1edf1a-5157-4d87-9813-67c7d39b274c
+            }
+            Block {
+              BlockType               Inport
+              Name                    "Q4"
+              Position                [55, 388, 85, 402]
+              Port                    3
+              IconDisplay             "Port number"
+              #GUID                   58f18d14-6c72-4401-ae12-1297ecace691
+            }
+            Block {
+              BlockType               Inport
+              Name                    "alpha_vel"
+              Position                [55, 28, 85, 42]
+              Port                    4
+              IconDisplay             "Port number"
+              #GUID                   b932bcfc-af05-460e-aa26-6e9ca616ecd2
+            }
+            Block {
+              BlockType               Inport
+              Name                    "alpha"
+              Position                [55, 63, 85, 77]
+              Port                    5
+              IconDisplay             "Port number"
+              #GUID                   a47d3dca-3cc7-48d7-8f8d-16f45f1a9355
+            }
+            Block {
+              BlockType               Inport
+              Name                    "beta_up"
+              Position                [55, 423, 85, 437]
+              Port                    6
+              IconDisplay             "Port number"
+              OutDataType             "sfix(16)"
+              OutScaling              "2^0"
+              #GUID                   189ce4d8-7db9-4fac-a956-5fac6e1979e4
+            }
+            Block {
+              BlockType               Inport
+              Name                    "beta_vel"
+              Position                [55, 493, 85, 507]
+              Port                    7
+              IconDisplay             "Port number"
+              OutDataType             "sfix(16)"
+              OutScaling              "2^0"
+              #GUID                   ffb5a2ce-9a44-4e3c-873e-8323c0b0e4a8
+            }
+            Block {
+              BlockType               Inport
+              Name                    "beta_down_start"
+              Position                [55, 458, 85, 472]
+              Port                    8
+              IconDisplay             "Port number"
+              OutDataType             "sfix(16)"
+              OutScaling              "2^0"
+              #GUID                   3b84b381-88be-47fd-a82c-347123671c67
+            }
+            Block {
+              BlockType               Reference
+              Name                    "ABS_"
+              Ports                   [1, 2, 0, 0, 0]
+              Position                [130, 218, 160, 242]
+              SourceBlock             "mathlib/ABS_"
+              SourceType              "ABS"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   d12bbd5a-c04d-49b7-b8c2-881e2fe8053d
+            }
+            Block {
+              BlockType               Reference
+              Name                    "ADD"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [620, 298, 645, 322]
+              SourceBlock             "mathlib/ADD"
+              SourceType              "ADD"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   02ed1605-2638-4dbc-9efa-1f5e2c8d6f33
+            }
+            Block {
+              BlockType               Reference
+              Name                    "ADD1"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [505, 38, 530, 62]
+              SourceBlock             "mathlib/ADD"
+              SourceType              "ADD"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   4ad61595-d2e6-40b8-b795-b36529a9df19
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNDR"
+              Ports                   [1, 2, 0, 0, 0]
+              Position                [160, 298, 190, 322]
+              SourceBlock             "reglib/CNDR"
+              SourceType              "CNDR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              n                       6
+              SATF                    on
+              up                      "[-1.5708 -0.7854 -0.0523 0.0523 0.7854 "
+"1.5708]"
+              yp                      [-0.12 -0.04 0 0 0.04 0.12]
+              #GUID                   c58a409a-ba52-47b1-b813-698e021e9932
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR10"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [445, 203, 460, 217]
+              SourceBlock             "mathlib/CNR"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     20
+              #GUID                   c2b0bf3b-59d1-4ec8-a2c0-8d85bb92dbcc
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR2"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [195, 288, 210, 302]
+              SourceBlock             "mathlib/CNR"
+              NamePlacement           "alternate"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     0
+              #GUID                   2d0a03f8-b87d-4e72-bcf7-9349bd5e07c3
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR20"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [180, 228, 195, 242]
+              SourceBlock             "mathlib/CNR"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     "0.349065850398866"
+              #GUID                   f0c7c245-2512-4474-b8d6-cba3ed21a4ae
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR3"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [305, 83, 320, 97]
+              SourceBlock             "mathlib/CNR"
+              NamePlacement           "alternate"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     0
+              #GUID                   0d60f432-31c0-40e7-ae24-706c03285d8b
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR4"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [245, 94, 295, 106]
+              SourceBlock             "mathlib/CNR"
+              NamePlacement           "alternate"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     "3.1415"
+              #GUID                   05506c62-b584-47b8-b9c2-40f33e29868e
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR7"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [320, 338, 335, 352]
+              SourceBlock             "mathlib/CNR"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     20
+              #GUID                   af874585-f694-451b-9315-5c966d8be46b
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR_1"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [300, 328, 315, 342]
+              SourceBlock             "mathlib/CNR"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     0
+              #GUID                   5f0970fe-4bb5-4951-b7ab-44399ea553fd
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR_INTE"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [335, 168, 350, 182]
+              SourceBlock             "mathlib/CNR"
+              NamePlacement           "alternate"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     1
+              #GUID                   c7a751ee-94b7-489e-b34b-e2d5bb85284e
+            }
+            Block {
+              BlockType               Reference
+              Name                    "EAS_upper_ss_controller"
+              Ports                   [4, 1, 0, 0, 0]
+              Position                [700, 23, 735, 92]
+              SourceBlock             "mathlib/EAS"
+              NamePlacement           "alternate"
+              SourceType              "EAS"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              a                       "1.129252325"
+              b                       "0.9969568362e-1"
+              c                       "3.607536576"
+              d                       ".5522734341"
+              y0                      0
+              #GUID                   2bf39a9f-6e67-4e65-af75-cf0eb1068ead
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTE"
+              Ports                   [5, 4, 0, 0, 0]
+              Position                [355, 295, 395, 355]
+              SourceBlock             "anallib/INTE"
+              NamePlacement           "alternate"
+              SourceType              "INTE"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ymin                    -1
+              ymax                    1
+              #GUID                   7e475bac-67d3-4284-806d-c38531eca6cc
+            }
+            Block {
+              BlockType               Reference
+              Name                    "INTE1"
+              Ports                   [5, 4, 0, 0, 0]
+              Position                [385, 190, 425, 250]
+              SourceBlock             "anallib/INTE"
+              NamePlacement           "alternate"
+              SourceType              "INTE"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ymin                    0
+              ymax                    30
+              #GUID                   ad89a47a-2c44-4375-90af-d9a531338794
+            }
+            Block {
+              BlockType               Reference
+              Name                    "OR_1"
+              Ports                   [2, 2, 0, 0, 0]
+              Position                [190, 348, 225, 372]
+              SourceBlock             "logiclib/OR_"
+              SourceType              "OR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   60ce6820-e240-4abb-aa96-b7bba4cfe15c
+            }
+            Block {
+              BlockType               Reference
+              Name                    "OR_2"
+              Ports                   [2, 2, 0, 0, 0]
+              Position                [115, 348, 150, 372]
+              SourceBlock             "logiclib/OR_"
+              SourceType              "OR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   a12b0513-ae48-4327-bb36-9e2d12ed2681
+            }
+            Block {
+              BlockType               Reference
+              Name                    "OR_7"
+              Ports                   [2, 2, 0, 0, 0]
+              Position                [285, 213, 320, 237]
+              SourceBlock             "logiclib/OR_"
+              SourceType              "OR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   92361f0f-cd85-43ab-a554-636f141c0553
+            }
+            Block {
+              BlockType               Reference
+              Name                    "REL"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [225, 218, 250, 242]
+              SourceBlock             "mathlib/REL"
+              SourceType              "REL"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              irel                    "6: greater or equal (>=)"
+              #GUID                   b1aa320c-4960-4958-b9e6-2831ebbaf0ae
+            }
+            Block {
+              BlockType               Reference
+              Name                    "REL2"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [480, 193, 505, 217]
+              SourceBlock             "mathlib/REL"
+              SourceType              "REL"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              irel                    "6: greater or equal (>=)"
+              #GUID                   81a50a91-ae03-4583-9dc2-20552bf8514f
+            }
+            Block {
+              BlockType               Reference
+              Name                    "RUN_INTE"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [330, 202, 355, 218]
+              SourceBlock             "mathlib/CNB"
+              NamePlacement           "alternate"
+              SourceType              "CNB"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              YCN                     on
+              #GUID                   5a28ae71-76e3-40fa-9189-6ade65bf64ba
+            }
+            Block {
+              BlockType               Reference
+              Name                    "SSW1"
+              Ports                   [3, 1, 0, 0, 0]
+              Position                [340, 83, 370, 117]
+              SourceBlock             "reglib/SSW"
+              NamePlacement           "alternate"
+              SourceType              "SSW"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   62f1d009-78d4-4456-90f7-51460ce4de02
+            }
+            Block {
+              BlockType               Reference
+              Name                    "SSW2"
+              Ports                   [3, 1, 0, 0, 0]
+              Position                [225, 288, 255, 322]
+              SourceBlock             "reglib/SSW"
+              NamePlacement           "alternate"
+              SourceType              "SSW"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   38958e44-8b02-4a91-ac21-1bbf9f6504a5
+            }
+            Block {
+              BlockType               Reference
+              Name                    "SUB"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [135, 423, 160, 447]
+              SourceBlock             "mathlib/SUB"
+              SourceType              "SUB"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   864ea50f-75b9-4059-8448-f3e612e68bf5
+            }
+            Block {
+              BlockType               Outport
+              Name                    "sp_ArmVelocity"
+              Position                [870, 53, 900, 67]
+              Port                    1
+              IconDisplay             "Port number"
+              #GUID                   1782ae0f-8d0d-4786-af9d-73b159662605
+            }
+            Block {
+              BlockType               Outport
+              Name                    "END_CENTER"
+              Position                [870, 198, 900, 212]
+              Port                    2
+              IconDisplay             "Port number"
+              #GUID                   df944502-1541-40c9-af7f-a662fb68c222
+            }
+            Line {
+              SrcBlock                "ABS_"
+              SrcPort                 1
+              DstBlock                "REL"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "ADD"
+              SrcPort                 1
+              Points                  [0, -245]
+              DstBlock                "EAS_upper_ss_controller"
+              DstPort                 3
+            }
+            Line {
+              SrcBlock                "ADD1"
+              SrcPort                 1
+              DstBlock                "EAS_upper_ss_controller"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "CNDR"
+              SrcPort                 1
+              DstBlock                "SSW2"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "CNR10"
+              SrcPort                 1
+              DstBlock                "REL2"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "CNR2"
+              SrcPort                 1
+              DstBlock                "SSW2"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "CNR20"
+              SrcPort                 1
+              DstBlock                "REL"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "CNR3"
+              SrcPort                 1
+              DstBlock                "SSW1"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "CNR4"
+              SrcPort                 1
+              DstBlock                "SSW1"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "CNR7"
+              SrcPort                 1
+              DstBlock                "INTE"
+              DstPort                 5
+            }
+            Line {
+              SrcBlock                "CNR_1"
+              SrcPort                 1
+              DstBlock                "INTE"
+              DstPort                 4
+            }
+            Line {
+              SrcBlock                "CNR_INTE"
+              SrcPort                 1
+              Points                  [15, 0; 0, 25]
+              Branch {
+                DstBlock                "INTE1"
+                DstPort                 1
+              }
+              Branch {
+                DstBlock                "INTE1"
+                DstPort                 5
+              }
+            }
+            Line {
+              SrcBlock                "EAS_upper_ss_controller"
+              SrcPort                 1
+              DstBlock                "sp_ArmVelocity"
+              DstPort                 1
+            }
+            Line {
+              Name                    "arm centering / upright position adjust"
+"ing"
+              SrcBlock                "INTE"
+              SrcPort                 1
+              Labels                  [1, 1]
+              DstBlock                "ADD"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "INTE1"
+              SrcPort                 1
+              DstBlock                "REL2"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "OR_1"
+              SrcPort                 2
+              Points                  [30, 0; 0, -15; 10, 0]
+              Branch {
+                Points                  [20, 0; 0, -25]
+                DstBlock                "INTE"
+                DstPort                 3
+              }
+              Branch {
+                DstBlock                "OR_7"
+                DstPort                 1
+              }
+            }
+            Line {
+              SrcBlock                "OR_2"
+              SrcPort                 1
+              DstBlock                "OR_1"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "OR_7"
+              SrcPort                 1
+              DstBlock                "INTE1"
+              DstPort                 3
+            }
+            Line {
+              SrcBlock                "Q2"
+              SrcPort                 1
+              Points                  [5, 0]
+              Branch {
+                Points                  [115, 0]
+                Branch {
+                  Points                  [65, 0; 0, -20]
+                  DstBlock                "INTE"
+                  DstPort                 2
+                }
+                Branch {
+                  DstBlock                "SSW2"
+                  DstPort                 3
+                }
+              }
+              Branch {
+                Points                  [0, 20]
+                DstBlock                "OR_2"
+                DstPort                 1
+              }
+            }
+            Line {
+              SrcBlock                "Q3"
+              SrcPort                 1
+              Points                  [0, 0]
+              Branch {
+                Points                  [0, 255]
+                DstBlock                "OR_2"
+                DstPort                 2
+              }
+              Branch {
+                DstBlock                "SSW1"
+                DstPort                 3
+              }
+            }
+            Line {
+              SrcBlock                "Q4"
+              SrcPort                 1
+              Points                  [85, 0]
+              DstBlock                "OR_1"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "REL"
+              SrcPort                 1
+              DstBlock                "OR_7"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "REL2"
+              SrcPort                 1
+              DstBlock                "END_CENTER"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "RUN_INTE"
+              SrcPort                 1
+              DstBlock                "INTE1"
+              DstPort                 2
+            }
+            Line {
+              Name                    "arm positioning when balancing"
+              SrcBlock                "SSW1"
+              SrcPort                 1
+              Labels                  [0, 0]
+              Points                  [115, 0]
+              DstBlock                "ADD1"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "SSW2"
+              SrcPort                 1
+              DstBlock                "INTE"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "SUB"
+              SrcPort                 1
+              Points                  [440, 0]
+              DstBlock                "ADD"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "alpha"
+              SrcPort                 1
+              Points                  [20, 0]
+              Branch {
+                Points                  [0, -25]
+                DstBlock                "ADD1"
+                DstPort                 1
+              }
+              Branch {
+                Points                  [0, 160]
+                Branch {
+                  DstBlock                "ABS_"
+                  DstPort                 1
+                }
+                Branch {
+                  Points                  [0, 80]
+                  DstBlock                "CNDR"
+                  DstPort                 1
+                }
+              }
+            }
+            Line {
+              SrcBlock                "alpha_vel"
+              SrcPort                 1
+              DstBlock                "EAS_upper_ss_controller"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "beta_down_start"
+              SrcPort                 1
+              Points                  [30, 0]
+              DstBlock                "SUB"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "beta_up"
+              SrcPort                 1
+              DstBlock                "SUB"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "beta_vel"
+              SrcPort                 1
+              Points                  [595, 0]
+              DstBlock                "EAS_upper_ss_controller"
+              DstPort                 4
+            }
+          }
+        }
+        Block {
+          BlockType               SubSystem
+          Name                    "Upright_position_detector"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [560, 16, 715, 49]
+          BackgroundColor         [0.666667, 0.725490, 0.901961]
+          MinAlgLoopOccurrences   off
+          PropExecContextOutsideSubsystem off
+          RTWSystemCode           "Auto"
+          FunctionWithSeparateData off
+          Opaque                  off
+          RequestExecContextInheritance off
+          MaskHideContents        off
+          ShowPortLabels          on
+          MaskType                "REX sequence"
+          MaskIconFrame           on
+          MaskIconOpaque          on
+          MaskIconRotate          "none"
+          MaskIconUnits           "autoscale"
+          #GUID                   5b208fd4-09f8-40fe-828e-f840894f9573
+          System {
+            Name                    "Upright_position_detector"
+            Location                [902, 309, 1236, 442]
+            Open                    off
+            ModelBrowserVisibility  off
+            ModelBrowserWidth       200
+            ScreenColor             "white"
+            PaperOrientation        "landscape"
+            PaperPositionMode       "auto"
+            PaperType               "A4"
+            PaperUnits              "centimeters"
+            TiledPaperMargins       [1.270000, 1.270000, 1.270000, 1.270000]
+            TiledPageScale          1
+            ShowPageBoundaries      off
+            ZoomFactor              100
+            #GUID                   059d0a7d-1298-4d7e-b1cb-ce17f1368cf5
+            Block {
+              BlockType               Inport
+              Name                    "beta_up"
+              Position                [30, 13, 60, 27]
+              Port                    1
+              IconDisplay             "Port number"
+              #GUID                   cd76cbc7-4746-406f-8760-18986ebbd023
+            }
+            Block {
+              BlockType               Inport
+              Name                    "beta_down_start"
+              Position                [30, 53, 60, 67]
+              Port                    2
+              IconDisplay             "Port number"
+              #GUID                   b278e84b-cc45-4b92-9323-427a514e9eed
+            }
+            Block {
+              BlockType               Reference
+              Name                    "ABS_"
+              Ports                   [1, 2, 0, 0, 0]
+              Position                [160, 28, 190, 52]
+              SourceBlock             "mathlib/ABS_"
+              SourceType              "ABS"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   0f5d3283-86ab-4e08-ae9e-e7a9cccd45eb
+            }
+            Block {
+              BlockType               Reference
+              Name                    "CNR"
+              Ports                   [0, 1, 0, 0, 0]
+              Position                [145, 75, 190, 95]
+              SourceBlock             "mathlib/CNR"
+              SourceType              "CNR"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              ycn                     "0.9"
+              #GUID                   bbe37227-5a3a-453d-819d-4fd66e9000b4
+            }
+            Block {
+              BlockType               Reference
+              Name                    "REL"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [230, 28, 255, 52]
+              SourceBlock             "mathlib/REL"
+              SourceType              "REL"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              irel                    "3: less than (<)"
+              #GUID                   96619bc2-c63b-4ea4-83ea-36df9ff365ce
+            }
+            Block {
+              BlockType               Reference
+              Name                    "SUB"
+              Ports                   [2, 1, 0, 0, 0]
+              Position                [110, 28, 135, 52]
+              SourceBlock             "mathlib/SUB"
+              SourceType              "SUB"
+              ShowPortLabels          "FromPortIcon"
+              SystemSampleTime        -1
+              FunctionWithSeparateData off
+              RTWMemSecFuncInitTerm   "Inherit from model"
+              RTWMemSecFuncExecute    "Inherit from model"
+              RTWMemSecDataConstants  "Inherit from model"
+              RTWMemSecDataInternal   "Inherit from model"
+              RTWMemSecDataParameters "Inherit from model"
+              #GUID                   ddb29094-1066-4033-a149-fef95d5d8695
+            }
+            Block {
+              BlockType               Outport
+              Name                    "UPRIGHT"
+              Position                [280, 33, 310, 47]
+              Port                    1
+              IconDisplay             "Port number"
+              #GUID                   4748ba5a-0629-4190-9432-b5c1de7638b3
+            }
+            Line {
+              SrcBlock                "ABS_"
+              SrcPort                 1
+              DstBlock                "REL"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "CNR"
+              SrcPort                 1
+              Points                  [20, 0]
+              DstBlock                "REL"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "REL"
+              SrcPort                 1
+              DstBlock                "UPRIGHT"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "SUB"
+              SrcPort                 1
+              DstBlock                "ABS_"
+              DstPort                 1
+            }
+            Line {
+              SrcBlock                "beta_down_start"
+              SrcPort                 1
+              Points                  [30, 0]
+              DstBlock                "SUB"
+              DstPort                 2
+            }
+            Line {
+              SrcBlock                "beta_up"
+              SrcPort                 1
+              Points                  [30, 0]
+              DstBlock                "SUB"
+              DstPort                 1
+            }
+          }
+        }
+        Block {
+          BlockType               Outport
+          Name                    "sp_ArmV"
+          Position                [865, 558, 895, 572]
+          Port                    1
+          BackgroundColor         [0.741176, 0.074510, 0.411765]
+          IconDisplay             "Port number"
+          #GUID                   7eee9760-8935-434c-ad81-466f71681a7b
+        }
+        Line {
+          SrcBlock                "ATMT"
+          SrcPort                 1
+          DstBlock                "Goto11"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "ATMT"
+          SrcPort                 2
+          DstBlock                "Goto12"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "ATMT"
+          SrcPort                 3
+          DstBlock                "Goto13"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "ATMT"
+          SrcPort                 4
+          DstBlock                "Goto14"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "ATMT"
+          SrcPort                 5
+          DstBlock                "Goto15"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "ATMT"
+          SrcPort                 11
+          DstBlock                "Goto16"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "ATMT"
+          SrcPort                 19
+          DstBlock                "Goto19"
+          DstPort                 1
+        }
+        Line {
+          Name                    "rad"
+          SrcBlock                "ArmP"
+          SrcPort                 1
+          Labels                  [0, 0]
+          DstBlock                "Signal_processing"
+          DstPort                 2
+        }
+        Line {
+          Name                    "rad/s"
+          SrcBlock                "ArmV"
+          SrcPort                 1
+          Labels                  [0, 0]
+          DstBlock                "Signal_processing"
+          DstPort                 3
+        }
+        Line {
+          SrcBlock                "CNR_alpha_setpoint"
+          SrcPort                 1
+          DstBlock                "Lower_equilibrium_position_control"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "From"
+          SrcPort                 1
+          DstBlock                "Upper_equilibrium_stabilization_algorithm"
+          DstPort                 4
+        }
+        Line {
+          SrcBlock                "From1"
+          SrcPort                 1
+          DstBlock                "OR_"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "From10"
+          SrcPort                 1
+          DstBlock                "Lower_equilibrium_position_control"
+          DstPort                 2
+        }
+        Line {
+          SrcBlock                "From11"
+          SrcPort                 1
+          DstBlock                "Scope2"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "From12"
+          SrcPort                 1
+          DstBlock                "Swing_up_algorithm"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "From13"
+          SrcPort                 1
+          DstBlock                "Swing_up_algorithm"
+          DstPort                 3
+        }
+        Line {
+          SrcBlock                "From14"
+          SrcPort                 1
+          DstBlock                "Upper_equilibrium_stabilization_algorithm"
+          DstPort                 5
+        }
+        Line {
+          SrcBlock                "From15"
+          SrcPort                 1
+          DstBlock                "Upper_equilibrium_stabilization_algorithm"
+          DstPort                 6
+        }
+        Line {
+          SrcBlock                "From16"
+          SrcPort                 1
+          DstBlock                "Upper_equilibrium_stabilization_algorithm"
+          DstPort                 7
+        }
+        Line {
+          SrcBlock                "From17"
+          SrcPort                 1
+          Points                  [0, -5]
+          DstBlock                "SUB_beta4visualization"
+          DstPort                 2
+        }
+        Line {
+          SrcBlock                "From18"
+          SrcPort                 1
+          DstBlock                "LPBRK3"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "From19"
+          SrcPort                 1
+          DstBlock                "Lower_equilibrium_stabilization_algorithm"
+          DstPort                 2
+        }
+        Line {
+          SrcBlock                "From2"
+          SrcPort                 1
+          Points                  [0, -10]
+          DstBlock                "OR_"
+          DstPort                 2
+        }
+        Line {
+          SrcBlock                "From20"
+          SrcPort                 1
+          DstBlock                "Lower_equilibrium_stabilization_algorithm"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "From21"
+          SrcPort                 1
+          DstBlock                "Lower_equilibrium_stabilization_algorithm"
+          DstPort                 3
+        }
+        Line {
+          SrcBlock                "From22"
+          SrcPort                 1
+          DstBlock                "Lower_equilibrium_stabilization_algorithm"
+          DstPort                 4
+        }
+        Line {
+          SrcBlock                "From23"
+          SrcPort                 1
+          DstBlock                "Lower_equilibrium_stabilization_algorithm"
+          DstPort                 5
+        }
+        Line {
+          SrcBlock                "From24"
+          SrcPort                 1
+          DstBlock                "Lower_equilibrium_stabilization_algorithm"
+          DstPort                 6
+        }
+        Line {
+          SrcBlock                "From25"
+          SrcPort                 1
+          DstBlock                "OR_4"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "From26"
+          SrcPort                 1
+          DstBlock                "SUB_beta4visualization"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "From27"
+          SrcPort                 1
+          DstBlock                "Upper_equilibrium_stabilization_algorithm"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "From28"
+          SrcPort                 1
+          DstBlock                "OR_4"
+          DstPort                 2
+        }
+        Line {
+          SrcBlock                "From29"
+          SrcPort                 1
+          DstBlock                "LPBRK4"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "From3"
+          SrcPort                 1
+          Points                  [0, 10]
+          DstBlock                "OR_1"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "From30"
+          SrcPort                 1
+          DstBlock                "Upper_equilibrium_stabilization_algorithm"
+          DstPort                 2
+        }
+        Line {
+          SrcBlock                "From31"
+          SrcPort                 1
+          DstBlock                "LPBRK1"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "From32"
+          SrcPort                 1
+          DstBlock                "NOT_1"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "From33"
+          SrcPort                 1
+          DstBlock                "Upright_position_detector"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "From34"
+          SrcPort                 1
+          DstBlock                "Upright_position_detector"
+          DstPort                 2
+        }
+        Line {
+          SrcBlock                "From35"
+          SrcPort                 1
+          DstBlock                "Lower_equilibrium_stabilization_algorithm"
+          DstPort                 7
+        }
+        Line {
+          SrcBlock                "From36"
+          SrcPort                 1
+          DstBlock                "Upper_equilibrium_stabilization_algorithm"
+          DstPort                 8
+        }
+        Line {
+          SrcBlock                "From37"
+          SrcPort                 1
+          DstBlock                "Upper_equilibrium_stabilization_algorithm"
+          DstPort                 3
+        }
+        Line {
+          SrcBlock                "From4"
+          SrcPort                 1
+          DstBlock                "Scope"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "From5"
+          SrcPort                 1
+          DstBlock                "Swing_up_algorithm"
+          DstPort                 2
+        }
+        Line {
+          SrcBlock                "From6"
+          SrcPort                 1
+          DstBlock                "OR_1"
+          DstPort                 2
+        }
+        Line {
+          SrcBlock                "From7"
+          SrcPort                 1
+          Points                  [0, 10]
+          DstBlock                "OR_3"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "From8"
+          SrcPort                 1
+          DstBlock                "OR_3"
+          DstPort                 2
+        }
+        Line {
+          SrcBlock                "From9"
+          SrcPort                 1
+          DstBlock                "Scope1"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "HOLD"
+          SrcPort                 1
+          DstBlock                "ATMT"
+          DstPort                 4
+        }
+        Line {
+          SrcBlock                "LPBRK1"
+          SrcPort                 1
+          DstBlock                "ATMT"
+          DstPort                 20
+        }
+        Line {
+          SrcBlock                "LPBRK2"
+          SrcPort                 1
+          DstBlock                "ATMT"
+          DstPort                 7
+        }
+        Line {
+          SrcBlock                "LPBRK3"
+          SrcPort                 1
+          DstBlock                "ATMT"
+          DstPort                 6
+        }
+        Line {
+          SrcBlock                "LPBRK4"
+          SrcPort                 1
+          DstBlock                "ATMT"
+          DstPort                 8
+        }
+        Line {
+          SrcBlock                "LPBRK5"
+          SrcPort                 1
+          DstBlock                "ATMT"
+          DstPort                 15
+        }
+        Line {
+          SrcBlock                "Lower_equilibrium_position_control"
+          SrcPort                 1
+          Points                  [50, 0]
+          DstBlock                "SELU"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "Lower_equilibrium_stabilization_algorithm"
+          SrcPort                 1
+          Points                  [20, 0; 0, 195]
+          DstBlock                "SELU"
+          DstPort                 4
+        }
+        Line {
+          SrcBlock                "Lower_equilibrium_stabilization_algorithm"
+          SrcPort                 2
+          DstBlock                "Goto17"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "NOT_1"
+          SrcPort                 1
+          DstBlock                "LPBRK5"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "OR_"
+          SrcPort                 1
+          Points                  [0, 20]
+          DstBlock                "OR_2"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "OR_1"
+          SrcPort                 1
+          Points                  [0, -20]
+          DstBlock                "OR_2"
+          DstPort                 2
+        }
+        Line {
+          SrcBlock                "OR_2"
+          SrcPort                 1
+          Points                  [20, 0; 0, 80]
+          DstBlock                "SELU"
+          DstPort                 6
+        }
+        Line {
+          SrcBlock                "OR_3"
+          SrcPort                 1
+          DstBlock                "SELU"
+          DstPort                 7
+        }
+        Line {
+          SrcBlock                "OR_4"
+          SrcPort                 1
+          DstBlock                "LPBRK2"
+          DstPort                 1
+        }
+        Line {
+          Name                    "6553..32767 (= 4..20 mA)"
+          SrcBlock                "PendP"
+          SrcPort                 1
+          Labels                  [0, 0]
+          DstBlock                "Signal_processing"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "SELU"
+          SrcPort                 1
+          DstBlock                "sp_ArmV"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "START"
+          SrcPort                 1
+          Points                  [0, 15]
+          DstBlock                "ATMT"
+          DstPort                 5
+        }
+        Line {
+          SrcBlock                "STOP"
+          SrcPort                 1
+          DstBlock                "ATMT"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "SUB_beta4visualization"
+          SrcPort                 1
+          DstBlock                "Scope3"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "Signal_processing"
+          SrcPort                 1
+          DstBlock                "Goto"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "Signal_processing"
+          SrcPort                 2
+          DstBlock                "Goto7"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "Signal_processing"
+          SrcPort                 3
+          DstBlock                "Goto1"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "Signal_processing"
+          SrcPort                 4
+          DstBlock                "Goto8"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "Signal_processing"
+          SrcPort                 5
+          DstBlock                "Goto9"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "Swing_up_algorithm"
+          SrcPort                 1
+          Points                  [40, 0; 0, 410]
+          DstBlock                "SELU"
+          DstPort                 2
+        }
+        Line {
+          SrcBlock                "Swing_up_algorithm"
+          SrcPort                 2
+          DstBlock                "Goto2"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "Upper_equilibrium_stabilization_algorithm"
+          SrcPort                 1
+          Points                  [30, 0; 0, 330]
+          DstBlock                "SELU"
+          DstPort                 3
+        }
+        Line {
+          SrcBlock                "Upper_equilibrium_stabilization_algorithm"
+          SrcPort                 2
+          DstBlock                "Goto18"
+          DstPort                 1
+        }
+        Line {
+          SrcBlock                "Upright_position_detector"
+          SrcPort                 1
+          DstBlock                "Goto3"
+          DstPort                 1
+        }
+      }
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG_1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [470, 138, 495, 152]
+      SourceBlock             "genlib/SG"
+      ShowName                on
+      NamePlacement           ""
+      isig                    "1: SINE"
+      amp                     3000
+      freq                    "0.05"
+      phase                   0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degree"
+      #GUID                   db755fd3-7ccb-43dd-8b7e-9b1a8e3c9c1e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG_2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [65, 208, 90, 222]
+      SourceBlock             "genlib/SG"
+      ShowName                on
+      NamePlacement           ""
+      isig                    "2: SQUARE"
+      amp                     64
+      freq                    "0.1"
+      phase                   0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degree"
+      #GUID                   019d32a7-78ea-43da-b11f-f9e4f37cbddf
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_1"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [305, 51, 360, 169]
+      SourceBlock             "arclib/TRND"
+      ShowName                on
+      NamePlacement           ""
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      #GUID                   b50ee5ce-0a80-4259-969d-74d658d52224
+    }
+    Line {
+      SrcBlock                "ADD_1"
+      SrcPort                 1
+      Points                  [30, 0]
+      DstBlock                "ADD_2"
+      DstPort                 2
+    }
+    Line {
+      SrcBlock                "ADD_2"
+      SrcPort                 1
+      Points                  [50, 0; 0, -10]
+      DstBlock                "Goto_1"
+      DstPort                 1
+    }
+    Line {
+      SrcBlock                "ADD_3"
+      SrcPort                 1
+      Points                  [30, 0]
+      DstBlock                "Goto_2"
+      DstPort                 1
+    }
+    Line {
+      SrcBlock                "CNB_1"
+      SrcPort                 1
+      Points                  [75, 0]
+      DstBlock                "TRND_1"
+      DstPort                 5
+    }
+    Line {
+      SrcBlock                "CNI_1"
+      SrcPort                 1
+      Points                  [30, 0]
+      DstBlock                "ADD_2"
+      DstPort                 1
+    }
+    Line {
+      SrcBlock                "CNI_2"
+      SrcPort                 1
+      Points                  [155, 0]
+      DstBlock                "Goto_3"
+      DstPort                 1
+    }
+    Line {
+      SrcBlock                "CNI_3"
+      SrcPort                 1
+      Points                  [100, 0]
+      DstBlock                "ADD_1"
+      DstPort                 2
+    }
+    Line {
+      SrcBlock                "CNI_4"
+      SrcPort                 1
+      Points                  [0, -10]
+      DstBlock                "ADD_3"
+      DstPort                 2
+    }
+    Line {
+      SrcBlock                "From_1"
+      SrcPort                 1
+      Points                  [90, 0]
+      DstBlock                "TRND_1"
+      DstPort                 1
+    }
+    Line {
+      SrcBlock                "From_2"
+      SrcPort                 1
+      DstBlock                "TRND_1"
+      DstPort                 2
+    }
+    Line {
+      SrcBlock                "From_3"
+      SrcPort                 1
+      Points                  [90, 0]
+      DstBlock                "TRND_1"
+      DstPort                 3
+    }
+    Line {
+      SrcBlock                "From_4"
+      SrcPort                 1
+      Points                  [90, 0]
+      DstBlock                "TRND_1"
+      DstPort                 4
+    }
+    Line {
+      SrcBlock                "REX_Control_Algorithm"
+      SrcPort                 1
+      DstBlock                "Goto_4"
+      DstPort                 1
+    }
+    Line {
+      SrcBlock                "SG_1"
+      SrcPort                 1
+      Points                  [85, 0]
+      DstBlock                "ADD_3"
+      DstPort                 1
+    }
+    Line {
+      SrcBlock                "SG_2"
+      SrcPort                 1
+      Points                  [15, 0]
+      Branch {
+        Points                  [55, 0; 0, 95]
+        DstBlock                "REX_Control_Algorithm"
+        DstPort                 1
+      }
+      Branch {
+        Points                  [55, 0; 0, 120]
+        DstBlock                "REX_Control_Algorithm"
+        DstPort                 2
+      }
+      Branch {
+        Points                  [10, 0]
+        Branch {
+          DstBlock                "ADD_1"
+          DstPort                 1
+        }
+        Branch {
+          Points                  [45, 0; 0, 145]
+          DstBlock                "REX_Control_Algorithm"
+          DstPort                 3
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/configuration" xmlns:tns="http://www.example.org/configuration" elementFormDefault="qualified">
+
+
+
+
+    <element name="CConfiguration">
+    	<complexType>
+    		<sequence>
+    			<element ref="tns:RecentFiles" maxOccurs="unbounded" minOccurs="0"></element>
+    		</sequence>
+    	</complexType>
+    </element>
+
+    <element name="RecentFiles" type="string"></element>
+</schema>
